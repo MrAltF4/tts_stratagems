@@ -7,7 +7,8 @@
       2. builds a deck for every detachment from its _deck.png sheet
       3. nests them:  Faction bag > Detachment bag > Deck
       4. adds a Core Stratagems bag
-      5. spawns the faction bags + core bag in a row on the table
+      5. puts them all in one master bag ("40K Stratagems - 11e <version>") and spawns it
+         at SPAWN_POSITION, ready to be saved as a single object for another mod
 
     The ONLY line you need to edit is ROOT_URL below.
     It must point at the repo's 11e-stratagems folder (the one holding versions.json)
@@ -42,6 +43,9 @@ local assetBuild  = ""   -- from manifest; appended to image URLs so TTS never r
 local FACTION_COLOUR = { r = 0.15, g = 0.25, b = 0.20 }
 local DET_COLOUR     = { r = 0.25, g = 0.40, b = 0.35 }
 local CORE_COLOUR    = { r = 0.50, g = 0.50, b = 0.50 }
+local MASTER_COLOUR  = { r = 0.60, g = 0.10, b = 0.10 }
+
+local SPAWN_POSITION = { x = 0, y = 3, z = 0 }   -- where the master bag appears (table centre)
 
 local BTN_COLORS     = "#0D2B40FF|#1A5C8AFF|#0A1F2EFF|#333333AA"
 local BTN_TEXT_COLOR = "#3CCCFF"
@@ -212,25 +216,13 @@ end
 -- ---------------------------------------------------------------------------
 -- spawning
 -- ---------------------------------------------------------------------------
-local function spawnAll(bagList)
-    local spacing = 4
-    local perRow  = 8   -- ~29 bags in one row would run off the table
-    local cols    = math.min(#bagList, perRow)
-    local rows    = math.ceil(#bagList / perRow)
-    local startX  = -((cols - 1) * spacing) / 2
-    local startZ  = ((rows - 1) * spacing) / 2
-    for i, bagData in ipairs(bagList) do
-        local col = (i - 1) % perRow
-        local row = math.floor((i - 1) / perRow)
-        -- stagger so TTS doesn't hitch on one giant frame
-        Wait.time(function()
-            spawnObjectData({
-                data = bagData,
-                position = { x = startX + col * spacing, y = 2, z = startZ - row * spacing },
-                rotation = { x = 0, y = 0, z = 0 },
-            })
-        end, (i - 1) * 0.4)
-    end
+-- everything goes into one master bag at a fixed spot, ready to save as a single object for another mod
+local function spawnMaster(masterBag)
+    spawnObjectData({
+        data = masterBag,
+        position = SPAWN_POSITION,
+        rotation = { x = 0, y = 0, z = 0 },
+    })
 end
 
 local function processManifest(manifest)
@@ -254,8 +246,8 @@ local function processManifest(manifest)
         cardTotal = cardTotal + #manifest.core.cards
     end
 
-    spawnAll(bagList)
-    setStatus(version .. ": spawned " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
+    spawnMaster(makeBag("40K Stratagems - 11e " .. version, MASTER_COLOUR, bagList))
+    setStatus(version .. ": 1 bag holding " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
 end
 
 -- download a URL and decode it as JSON; onDone(data) on success, onFail(message) otherwise

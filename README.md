@@ -72,8 +72,25 @@ Double-click **build_release.bat**. It reads everything in `scripts\input` and:
    default. Answer **n** if you want to try it in TTS first: it still appears in the TTS
    Version dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
    in `11e-stratagems\versions.json`;
-4. asks you to confirm, then builds `11e-stratagems\<version>\` (about 1,500 files) and adds
-   the version to `11e-stratagems\versions.json`.
+4. asks you to confirm, then builds `11e-stratagems\<version>\` (about 260 files, ~40 MB) and
+   adds the version to `11e-stratagems\versions.json`.
+
+Each release holds one `_deck.png` sheet per detachment (all its cards in a grid), the card
+back and a `manifest.json` listing every card. That's all TTS needs. Individual card images
+aren't published, because nothing uses them and they'd more than double each release. If you
+ever do want them, run `.venv\Scripts\python.exe -I scripts\build_release.py --with-cards`.
+
+Some factions get their common name in TTS so players can find them, e.g. game-datacards'
+"Asuryani" becomes "Aeldari". The list lives in `scripts\faction_names.json`; edit it to add
+or change one. If game-datacards ever renames a faction so a rule no longer matches, the
+build prints a warning.
+
+## Known issues
+
+- **TTS stops responding for a while when you click "Build Stratagem Bags".** Building all
+  29 factions (about 1,200 cards) at once makes Windows show "Tabletop Simulator is not
+  responding". Click **Wait**: it finishes and the bag appears. Not being fixed for now,
+  since it only happens when building the bag, not when playing with it.
 
 Nothing goes online until you **commit and push** the new folder and `versions.json`.
 Use GitHub Desktop (or git) for that: the GitHub website only uploads 100 files at a time.

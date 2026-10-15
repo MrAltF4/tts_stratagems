@@ -12,6 +12,8 @@ Options:
     --version vX.Y    release folder name                    (default: asks, suggesting the next one)
     --latest / --no-latest   make it the TTS default or not  (default: asks)
     --yes             don't ask for confirmation before writing
+    --with-cards      also publish every card as its own PNG (off by default: TTS only uses the
+                      _deck.png sheets, and the singles more than double the release size)
 
 What it does:
   - reads every datacards_*.zip (and its .source.json from pull_datacards.py)
@@ -19,7 +21,8 @@ What it does:
   - checks card counts against the game-datacards data the cards were made from
   - crops the transparent band off every card, fits the card back to the same shape
   - cleans names: strips the _1/_2 game-datacards adds to repeated stratagems, plain-ASCII slugs
-  - writes <root>/<version>/ (cards, _deck.png sheets, card_back.jpg, manifest.json)
+  - renames factions to their common names for TTS (scripts/faction_names.json, e.g. Asuryani -> Aeldari)
+  - writes <root>/<version>/ (_deck.png sheets, card_back.jpg, manifest.json; single cards with --with-cards)
   - adds the version to <root>/versions.json (and sets it as latest if asked)
 It never overwrites an existing version folder and never touches GitHub; you commit and push.
 """
@@ -226,7 +229,9 @@ def read_input(indir):
 # ---------------------------------------------------------------------------
 # write
 # ---------------------------------------------------------------------------
-def write_group(dirpath, urlpath, cards, box, problems):
+def write_group(dirpath, urlpath, cards, box, problems, with_cards):
+    """Writes the group's _deck.png. Individual card PNGs are only written with --with-cards:
+    TTS only uses the deck sheet, and the singles roughly double the release size."""
     os.makedirs(dirpath, exist_ok=True)
     entries, cropped, used = [], [], {}
     for stem in sorted(cards):
@@ -236,17 +241,31 @@ def write_group(dirpath, urlpath, cards, box, problems):
             continue
         used[fn] = stem
         data = crop_png(cards[stem], box)
-        with open(os.path.join(dirpath, fn), "wb") as f:
-            f.write(data)
         cropped.append(data)
-        entries.append({"name": card_title(stem), "file": fn, "path": f"{urlpath}/{fn}",
-                        "sha1": hashlib.sha1(data).hexdigest()[:12], "deck_index": len(entries)})
+        entry = {"name": card_title(stem), "sha1": hashlib.sha1(data).hexdigest()[:12],
+                 "deck_index": len(entries)}
+        if with_cards:
+            with open(os.path.join(dirpath, fn), "wb") as f:
+                f.write(data)
+            entry.update({"file": fn, "path": f"{urlpath}/{fn}"})
+        entries.append(entry)
     cols, rows, size = stitch(cropped, os.path.join(dirpath, "_deck.png"))
     return {"cards": entries, "deck": {"path": f"{urlpath}/_deck.png", "cols": cols, "rows": rows,
                                        "sheet_px": list(size), "count": len(entries)}}
 
 
-def build(factions, core, out, card_back, version, data_versions):
+def load_renames(path):
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("renames", {})
+
+
+def display_name(name, renames):
+    return renames.get(name) or renames.get(tidy(name)) or tidy(name)
+
+
+def build(factions, core, out, card_back, version, data_versions, with_cards, renames):
     problems = []
 
     # one crop box for every card so all cards (and so all deck cells) are the same size
@@ -274,16 +293,18 @@ def build(factions, core, out, card_back, version, data_versions):
     }
 
     fac_slugs = {}
-    for name in sorted(factions, key=lambda n: tidy(n).lower()):
+    for name in sorted(factions, key=lambda n: display_name(n, renames).lower()):
         f = factions[name]
-        fslug = slug(name)
+        shown = display_name(name, renames)
+        fslug = slug(shown)
         if fslug in fac_slugs:
             problems.append(f"factions '{name}' and '{fac_slugs[fslug]}' both become '{fslug}'")
             continue
         fac_slugs[fslug] = name
         n = len(f["detachments"])
-        print(f"  {tidy(name)}: {n} detachment{'s' if n != 1 else ''}", flush=True)
-        entry = {"name": tidy(name), "slug": fslug, "detachments": [],
+        renamed = f"  (from {tidy(name)})" if shown != tidy(name) else ""
+        print(f"  {shown}: {n} detachment{'s' if n != 1 else ''}{renamed}", flush=True)
+        entry = {"name": shown, "source_name": tidy(name), "slug": fslug, "detachments": [],
                  "data_version": f["source"].get("data_version"),
                  "updated": f["source"].get("faction_updated")}
         det_slugs = {}
@@ -294,13 +315,13 @@ def build(factions, core, out, card_back, version, data_versions):
                 continue
             det_slugs[dslug] = det
             group = write_group(os.path.join(out, fslug, dslug), f"{fslug}/{dslug}",
-                                f["detachments"][det], box, problems)
+                                f["detachments"][det], box, problems, with_cards)
             entry["detachments"].append({"name": tidy(det), "slug": dslug, **group})
         manifest["factions"].append(entry)
 
     print("  Core Stratagems", flush=True)
     manifest["core"] = {"name": "Core Stratagems", "slug": "core",
-                        **write_group(os.path.join(out, "core"), "core", core, box, problems)}
+                        **write_group(os.path.join(out, "core"), "core", core, box, problems, with_cards)}
 
     fit_back(card_back, card_size, os.path.join(out, "card_back.jpg"))
 
@@ -329,7 +350,7 @@ def validate(out, manifest):
     card_w = card_h = None
     for label, g in groups:
         for c in g["cards"]:
-            if not os.path.exists(os.path.join(out, c["path"])):
+            if "path" in c and not os.path.exists(os.path.join(out, c["path"])):
                 problems.append(f"{label}: missing {c['path']}")
         sheet_path = os.path.join(out, g["deck"]["path"])
         if not os.path.exists(sheet_path):
@@ -384,6 +405,10 @@ def main(argv):
     p.add_argument("--latest", dest="latest", action="store_true", default=None)
     p.add_argument("--no-latest", dest="latest", action="store_false")
     p.add_argument("--yes", action="store_true")
+    p.add_argument("--names", default=os.path.join(HERE, "faction_names.json"),
+                   help="faction renames for TTS (default: scripts/faction_names.json)")
+    p.add_argument("--with-cards", action="store_true",
+                   help="also publish each card as its own PNG (TTS doesn't need them)")
     args = p.parse_args(argv)
 
     versions_path, versions = load_versions(args.root)
@@ -397,6 +422,12 @@ def main(argv):
     print(f"  Detachments:  {n_dets}")
     print(f"  Cards:        {n_cards} detachment + {len(core)} core")
     print(f"  Data version: {', '.join(str(v) for v in data_versions) or 'unknown'} (game-datacards)")
+    renames = load_renames(args.names)
+    found = set(factions) | {tidy(n) for n in factions}
+    for old in renames:
+        if old not in found:
+            warnings.append(f"rename '{old}' in {os.path.basename(args.names)} matches no faction "
+                            "(did game-datacards rename it?)")
     for w in warnings:
         print(f"  WARNING: {w}")
     if problems:
@@ -426,7 +457,7 @@ def main(argv):
         latest = ask_yes_no(f"Make {version} the latest (what TTS picks by default)?", True)
 
     out = os.path.join(args.root, version)
-    print(f"\nWill write {out}")
+    print(f"\nWill write {out}" + ("  (including individual card images)" if args.with_cards else ""))
     print(f"and add {version} to versions.json" + (" as latest." if latest else " (latest stays "
                                                     f"{versions['latest'] or 'unset'})."))
     if not args.yes and not ask_yes_no("Go ahead?", True):
@@ -439,7 +470,8 @@ def main(argv):
     os.makedirs(tmp)
     try:
         print("\nBuilding...")
-        manifest, problems = build(factions, core, tmp, args.card_back, version, data_versions)
+        manifest, problems = build(factions, core, tmp, args.card_back, version, data_versions,
+                                   args.with_cards, renames)
         print("Checking the output...")
         problems += validate(tmp, manifest)
         if problems:
