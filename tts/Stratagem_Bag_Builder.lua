@@ -12,7 +12,7 @@
     It must point at the repo's 11e folder and end with a slash.
 ]]
 
-local BASE_URL = "https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/11e/"
+local BASE_URL = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/"
 
 -- ---------------------------------------------------------------------------
 -- state
