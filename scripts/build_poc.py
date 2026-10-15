@@ -124,8 +124,6 @@ for (f, d), cards in sorted(tree.items(), key=lambda kv: (kv[0][0], kv[0][1] or 
                                   **write_group(os.path.join(repo, fe["slug"], slug(d)),
                                                 f"{fe['slug']}/{slug(d)}", cards)})
 manifest["factions"] = list(fac.values())
-with open(os.path.join(repo, "manifest.json"), "w", encoding="utf-8") as f:
-    json.dump(manifest, f, indent=2, ensure_ascii=False)
 
 if BACK:
     # fit the back to the same shape as the trimmed faces (centre-ish crop, biased to keep the logo)
@@ -136,3 +134,17 @@ if BACK:
     top = round(extra * 0.3)
     b.crop((0, top, cw, top + ch)).save(os.path.join(repo, "card_back.jpg"), quality=92)
 print("done:", sum(len(v) for v in tree.values()), "cards")
+
+# ---- manifest (written last so it can carry a build id) ----
+# TTS caches downloaded images by URL and never re-downloads them, and GitHub's raw host caches
+# for a few minutes. The build id changes whenever any image changes; the TTS script appends it to
+# every image URL (?v=<build>) so updated art is always fetched fresh.
+h = hashlib.sha1()
+for dp, _, fs in sorted(os.walk(repo)):
+    for fn in sorted(fs):
+        if fn != "manifest.json":
+            h.update(open(os.path.join(dp, fn), "rb").read())
+manifest["build"] = h.hexdigest()[:8]
+with open(os.path.join(repo, "manifest.json"), "w", encoding="utf-8") as f:
+    json.dump(manifest, f, indent=2, ensure_ascii=False)
+print("build id:", manifest["build"])

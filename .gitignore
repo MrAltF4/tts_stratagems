@@ -1,0 +1,26 @@
+# Internal handoff notes (not for the public repo)
+HANDOFF.md
+
+# Raw game-datacards batch zips (pipeline input; testdata/ is kept on purpose)
+input/
+
+# Old saved-object route output (gen_tts.py), not used
+tts/Necrons_Stratagems_SAMPLE.json
+
+# Local/scratch pipeline output; releases go in 11e-stratagems/<version>/
+out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / Claude local settings
+.vscode/
+.idea/
+.claude/settings.local.json

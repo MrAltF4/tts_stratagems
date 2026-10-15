@@ -2,25 +2,30 @@
     40K Stratagem Bag Builder  (paste into TTS > Scripting > Global)
 
     One button. Click it and the script:
-      1. downloads manifest.json from the GitHub repo
-      2. builds a deck for every detachment from its _deck.png sheet
-      3. nests them:  Faction bag > Detachment bag > Deck
-      4. adds a Core Stratagems bag
-      5. spawns the faction bags + core bag in a row on the table
+      1. downloads latest.json to find the current release folder (e.g. v0.1)
+      2. downloads that release's manifest.json
+      3. builds a deck for every detachment from its _deck.png sheet
+      4. nests them:  Faction bag > Detachment bag > Deck
+      5. adds a Core Stratagems bag
+      6. spawns the faction bags + core bag in a row on the table
 
-    The ONLY line you need to edit is BASE_URL below.
-    It must point at the repo's 11e folder and end with a slash.
+    The ONLY line you need to edit is ROOT_URL below.
+    It must point at the repo's 11e-stratagems folder (the one holding latest.json)
+    and end with a slash. New releases are picked up from latest.json automatically.
 ]]
 
-local BASE_URL = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/"
+local ROOT_URL = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-stratagems/"
 
 -- ---------------------------------------------------------------------------
 -- state
 -- ---------------------------------------------------------------------------
+local BASE_URL    = ""   -- ROOT_URL .. "<version>/", set from latest.json on each build
+local version     = ""
 local building    = false
 local guidCounter = 0
 local deckCounter = 0
 local cardBackUrl = ""
+local assetBuild  = ""   -- from manifest; appended to image URLs so TTS never reuses a stale cached image
 
 local FACTION_COLOUR = { r = 0.15, g = 0.25, b = 0.20 }
 local DET_COLOUR     = { r = 0.25, g = 0.40, b = 0.35 }
@@ -31,6 +36,13 @@ local BTN_TEXT_COLOR = "#3CCCFF"
 
 -- forward declarations (per TTS gotchas: declare first, assign without `local`)
 local setStatus
+
+local function assetUrl(path)
+    if assetBuild ~= "" then
+        return BASE_URL .. path .. "?v=" .. assetBuild
+    end
+    return BASE_URL .. path
+end
 
 -- ---------------------------------------------------------------------------
 -- UI (Global UI, always present - XML built with table.insert)
@@ -98,7 +110,7 @@ local function makeDeck(group, nickname)
 
     local customDeck = {}
     customDeck[tostring(key)] = {
-        FaceURL = BASE_URL .. group.deck.path,
+        FaceURL = assetUrl(group.deck.path),
         BackURL = cardBackUrl,
         NumWidth = group.deck.cols,
         NumHeight = group.deck.rows,
@@ -164,7 +176,8 @@ local function spawnAll(bagList)
 end
 
 local function processManifest(manifest)
-    cardBackUrl = BASE_URL .. manifest.card_back
+    assetBuild = tostring(manifest.build or "")
+    cardBackUrl = assetUrl(manifest.card_back)
     local bagList = {}
     local deckTotal, cardTotal = 0, 0
 
@@ -184,7 +197,27 @@ local function processManifest(manifest)
     end
 
     spawnAll(bagList)
-    setStatus("Spawned " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
+    setStatus(version .. ": spawned " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
+end
+
+-- download a URL and decode it as JSON; onDone(data) on success, otherwise sets status and stops the build
+local function fetchJson(url, label, onDone)
+    WebRequest.get(url, function(request)
+        if request.is_error then
+            building = false
+            setStatus(label .. " download failed: " .. tostring(request.error))
+            return
+        end
+
+        local ok, data = pcall(JSON.decode, request.text)
+        if not ok or type(data) ~= "table" then
+            building = false
+            setStatus(label .. " is not valid JSON")
+            return
+        end
+
+        onDone(data)
+    end)
 end
 
 -- ---------------------------------------------------------------------------
@@ -193,36 +226,36 @@ end
 function onBuildStratagems(player)
     if building then return end
 
-    if string.find(BASE_URL, "YOUR_USER", 1, true) then
-        setStatus("Edit BASE_URL at top of Global script first")
+    if string.find(ROOT_URL, "YOUR_USER", 1, true) then
+        setStatus("Edit ROOT_URL at top of Global script first")
         return
     end
 
     building = true
     guidCounter = 0
     deckCounter = 0
-    setStatus("Downloading manifest...")
+    setStatus("Finding latest release...")
 
-    WebRequest.get(BASE_URL .. "manifest.json", function(request)
-        if request.is_error then
+    fetchJson(ROOT_URL .. "latest.json", "latest.json", function(latest)
+        -- folder name only, e.g. "v0.1" (letters, digits, dot, dash, underscore)
+        local v = tostring(latest.version or "")
+        if not string.match(v, "^[%w%.%-_]+$") then
             building = false
-            setStatus("Download failed: " .. tostring(request.error))
+            setStatus("latest.json has no valid version")
             return
         end
+        version  = v
+        BASE_URL = ROOT_URL .. version .. "/"
+        setStatus("Downloading " .. version .. " manifest...")
 
-        local ok, manifest = pcall(JSON.decode, request.text)
-        if not ok or type(manifest) ~= "table" then
+        fetchJson(BASE_URL .. "manifest.json", "manifest.json", function(manifest)
+            setStatus("Building " .. version .. " bags...")
+            local ok, err = pcall(processManifest, manifest)
             building = false
-            setStatus("manifest.json is not valid JSON")
-            return
-        end
-
-        setStatus("Building bags...")
-        local ok2, err = pcall(processManifest, manifest)
-        building = false
-        if not ok2 then
-            setStatus("Build error: " .. tostring(err))
-        end
+            if not ok then
+                setStatus("Build error: " .. tostring(err))
+            end
+        end)
     end)
 end
 
