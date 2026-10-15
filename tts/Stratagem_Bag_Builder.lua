@@ -87,7 +87,7 @@ local function buildUiXml(statusText)
     local btnLabel = versionsLoaded and "Build Stratagem Bags" or "Reload Versions"
 
     local lines = {}
-    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperCenter" offsetXY="0 -200" width="260" height="130" color="#101820E6">')
+    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperCenter" offsetXY="0 -150" width="260" height="130" color="#101820E6">')
     table.insert(lines, '  <Text text="Version" color="#FFFFFF" fontSize="14" rectAlignment="UpperLeft" offsetXY="10 -10" width="70" height="30" alignment="MiddleLeft" />')
     table.insert(lines, '  <Dropdown id="strat_version" onValueChanged="onVersionChosen" rectAlignment="UpperLeft" offsetXY="80 -10" width="170" height="30" fontSize="14">')
     if #versions == 0 then
