@@ -180,6 +180,11 @@ local function makeDeck(group, nickname)
         table.insert(ids, cardId)
     end
 
+    -- a TTS deck needs at least 2 cards; a 1-card detachment goes in its bag as a plain card
+    if #cards == 1 then
+        return cards[1]
+    end
+
     local deck = baseObject("DeckCustom", nickname, makeTransform(180, 180))
     deck.DeckIDs = ids
     deck.CustomDeck = customDeck
@@ -209,13 +214,19 @@ end
 -- ---------------------------------------------------------------------------
 local function spawnAll(bagList)
     local spacing = 4
-    local startX = -((#bagList - 1) * spacing) / 2
+    local perRow  = 8   -- ~29 bags in one row would run off the table
+    local cols    = math.min(#bagList, perRow)
+    local rows    = math.ceil(#bagList / perRow)
+    local startX  = -((cols - 1) * spacing) / 2
+    local startZ  = ((rows - 1) * spacing) / 2
     for i, bagData in ipairs(bagList) do
+        local col = (i - 1) % perRow
+        local row = math.floor((i - 1) / perRow)
         -- stagger so TTS doesn't hitch on one giant frame
         Wait.time(function()
             spawnObjectData({
                 data = bagData,
-                position = { x = startX + (i - 1) * spacing, y = 2, z = 0 },
+                position = { x = startX + col * spacing, y = 2, z = startZ - row * spacing },
                 rotation = { x = 0, y = 0, z = 0 },
             })
         end, (i - 1) * 0.4)

@@ -57,3 +57,24 @@ For each faction you get two files, for example:
   chiefly the **game-datacards data version** they were made from, when that faction's
   data was last updated, and how many stratagems and detachments to expect. This lets you
   tell later which version of the data a set of cards belongs to.
+
+### 4. Run build_release.bat (to make a new version for TTS)
+
+Double-click **build_release.bat**. It reads everything in `scripts\input` and:
+
+1. prints a summary (factions, detachments, cards, and the game-datacards data version) and
+   stops with a clear message if anything doesn't add up, for example a zip with fewer cards
+   than the data says it should have (just run pull_all.bat again);
+2. asks for the **new version** number, suggesting the next one (press Enter to accept it,
+   or type your own, e.g. `v1.0`). Use `v0.x` while testing and `v1.0` onwards once it's
+   released. A version that already exists is never overwritten;
+3. asks whether the new version should be the **latest**, which is the one TTS picks by
+   default. Answer **n** if you want to try it in TTS first: it still appears in the TTS
+   Version dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
+   in `11e-stratagems\versions.json`;
+4. asks you to confirm, then builds `11e-stratagems\<version>\` (about 1,500 files) and adds
+   the version to `11e-stratagems\versions.json`.
+
+Nothing goes online until you **commit and push** the new folder and `versions.json`.
+Use GitHub Desktop (or git) for that: the GitHub website only uploads 100 files at a time.
+After pushing, GitHub can take a few minutes before the new version shows up in TTS.
