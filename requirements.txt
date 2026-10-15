@@ -1,0 +1,4 @@
+# python -m pip install -r requirements.txt
+# then once, for pull_datacards.py:  python -m playwright install chromium
+pillow==12.3.0
+playwright==1.64.0

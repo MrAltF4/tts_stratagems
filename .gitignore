@@ -1,7 +1,8 @@
 # Internal handoff notes (not for the public repo)
 HANDOFF.md
 
-# Raw game-datacards batch zips (pipeline input; testdata/ is kept on purpose)
+# Pulled game-datacards zips + .source.json (local pipeline input, never uploaded;
+# testdata/ is kept on purpose). Covers scripts/input/ and any other folder named input.
 input/
 
 # Old saved-object route output (gen_tts.py), not used
