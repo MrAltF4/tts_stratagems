@@ -1,17 +1,22 @@
 --[[
     40K Stratagem Bag Builder  (paste into TTS > Scripting > Global)
 
-    One button. Click it and the script:
-      1. downloads latest.json to find the current release folder (e.g. v0.1)
-      2. downloads that release's manifest.json
-      3. builds a deck for every detachment from its _deck.png sheet
-      4. nests them:  Faction bag > Detachment bag > Deck
-      5. adds a Core Stratagems bag
-      6. spawns the faction bags + core bag in a row on the table
+    On load the panel downloads versions.json and fills the Version dropdown
+    (latest release preselected). Pick a version, click the button, and the script:
+      1. downloads that release's manifest.json
+      2. builds a deck for every detachment from its _deck.png sheet
+      3. nests them:  Faction bag > Detachment bag > Deck
+      4. adds a Core Stratagems bag
+      5. spawns the faction bags + core bag in a row on the table
 
     The ONLY line you need to edit is ROOT_URL below.
-    It must point at the repo's 11e-stratagems folder (the one holding latest.json)
-    and end with a slash. New releases are picked up from latest.json automatically.
+    It must point at the repo's 11e-stratagems folder (the one holding versions.json)
+    and end with a slash. New releases are picked up from versions.json automatically.
+	
+	==========================================================================================================================
+	========= Created by MrAltF4 =============================================================================================
+	==========================================================================================================================
+	=============================== Not possible without the support from https://game-datacards.eu/ =========================
 ]]
 
 local ROOT_URL = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-stratagems/"
@@ -19,8 +24,15 @@ local ROOT_URL = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/
 -- ---------------------------------------------------------------------------
 -- state
 -- ---------------------------------------------------------------------------
-local BASE_URL    = ""   -- ROOT_URL .. "<version>/", set from latest.json on each build
-local version     = ""
+local BASE_URL    = ""   -- ROOT_URL .. "<version>/", set when a build starts
+local version     = ""   -- version being built
+
+local versions        = {}   -- folder names from versions.json, in file order (newest first)
+local latestVersion   = ""
+local selectedVersion = ""   -- what the dropdown currently shows
+local versionsLoaded  = false
+local loadingVersions = false
+
 local building    = false
 local guidCounter = 0
 local deckCounter = 0
@@ -36,6 +48,24 @@ local BTN_TEXT_COLOR = "#3CCCFF"
 
 -- forward declarations (per TTS gotchas: declare first, assign without `local`)
 local setStatus
+local loadVersions
+
+-- folder name only, e.g. "v0.1" (letters, digits, dot, dash, underscore); also keeps it XML-safe
+local function isValidVersion(v)
+    return type(v) == "string" and string.match(v, "^[%w%.%-_]+$") ~= nil
+end
+
+-- status text can include web error messages; keep them from breaking the XML
+local function xmlEscape(s)
+    return (tostring(s):gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub('"', "&quot;"))
+end
+
+local function hasVersion(v)
+    for _, known in ipairs(versions) do
+        if known == v then return true end
+    end
+    return false
+end
 
 local function assetUrl(path)
     if assetBuild ~= "" then
@@ -47,13 +77,30 @@ end
 -- ---------------------------------------------------------------------------
 -- UI (Global UI, always present - XML built with table.insert)
 -- ---------------------------------------------------------------------------
-local function buildUiXml()
+-- Rebuilt whenever the version list changes (structural change: the dropdown options).
+-- statusText is baked in because setAttribute straight after setXml can be lost while the UI reloads.
+local function buildUiXml(statusText)
+    local btnLabel = versionsLoaded and "Build Stratagem Bags" or "Reload Versions"
+
     local lines = {}
-    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperLeft" offsetXY="20 -20" width="260" height="92" color="#101820E6">')
-    table.insert(lines, '  <Button id="strat_btn" onClick="onBuildStratagems" rectAlignment="UpperLeft" offsetXY="10 -10" width="240" height="40" fontSize="16" colors="' .. BTN_COLORS .. '" transition="ColorTint">')
-    table.insert(lines, '    <Text id="strat_btn_text" text="Build Stratagem Bags" color="' .. BTN_TEXT_COLOR .. '" fontSize="16" width="240" height="40" alignment="MiddleCenter" />')
+    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperLeft" offsetXY="20 -20" width="260" height="130" color="#101820E6">')
+    table.insert(lines, '  <Text text="Version" color="#FFFFFF" fontSize="14" rectAlignment="UpperLeft" offsetXY="10 -10" width="70" height="30" alignment="MiddleLeft" />')
+    table.insert(lines, '  <Dropdown id="strat_version" onValueChanged="onVersionChosen" rectAlignment="UpperLeft" offsetXY="80 -10" width="170" height="30" fontSize="14">')
+    if #versions == 0 then
+        table.insert(lines, '    <Option selected="true">' .. (loadingVersions and "Loading..." or "None found") .. '</Option>')
+    else
+        for _, v in ipairs(versions) do
+            local label = v
+            if v == latestVersion then label = v .. " (latest)" end
+            local selected = (v == selectedVersion) and ' selected="true"' or ''
+            table.insert(lines, '    <Option' .. selected .. '>' .. label .. '</Option>')
+        end
+    end
+    table.insert(lines, '  </Dropdown>')
+    table.insert(lines, '  <Button id="strat_btn" onClick="onBuildStratagems" rectAlignment="UpperLeft" offsetXY="10 -48" width="240" height="40" fontSize="16" colors="' .. BTN_COLORS .. '" transition="ColorTint">')
+    table.insert(lines, '    <Text id="strat_btn_text" text="' .. btnLabel .. '" color="' .. BTN_TEXT_COLOR .. '" fontSize="16" width="240" height="40" alignment="MiddleCenter" />')
     table.insert(lines, '  </Button>')
-    table.insert(lines, '  <Text id="strat_status" text="Ready" color="#FFFFFF" fontSize="12" rectAlignment="UpperLeft" offsetXY="10 -56" width="240" height="30" alignment="MiddleLeft" />')
+    table.insert(lines, '  <Text id="strat_status" text="' .. xmlEscape(statusText or "") .. '" color="#FFFFFF" fontSize="12" rectAlignment="UpperLeft" offsetXY="10 -94" width="240" height="30" alignment="MiddleLeft" />')
     table.insert(lines, '</Panel>')
     return table.concat(lines, "\n")
 end
@@ -200,23 +247,81 @@ local function processManifest(manifest)
     setStatus(version .. ": spawned " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
 end
 
--- download a URL and decode it as JSON; onDone(data) on success, otherwise sets status and stops the build
-local function fetchJson(url, label, onDone)
+-- download a URL and decode it as JSON; onDone(data) on success, onFail(message) otherwise
+local function fetchJson(url, label, onDone, onFail)
     WebRequest.get(url, function(request)
         if request.is_error then
-            building = false
-            setStatus(label .. " download failed: " .. tostring(request.error))
+            onFail(label .. " download failed: " .. tostring(request.error))
             return
         end
 
         local ok, data = pcall(JSON.decode, request.text)
         if not ok or type(data) ~= "table" then
-            building = false
-            setStatus(label .. " is not valid JSON")
+            onFail(label .. " is not valid JSON")
             return
         end
 
         onDone(data)
+    end)
+end
+
+-- ---------------------------------------------------------------------------
+-- version list (versions.json: { "latest": "v0.1", "versions": ["v0.1", ...] }, newest first)
+-- ---------------------------------------------------------------------------
+loadVersions = function()
+    if loadingVersions then return end
+    loadingVersions = true
+    versionsLoaded = false
+    versions = {}
+    UI.setXml(buildUiXml("Loading versions..."))
+
+    fetchJson(ROOT_URL .. "versions.json", "versions.json", function(data)
+        local list = {}
+        for _, v in ipairs(data.versions or {}) do
+            if isValidVersion(v) then table.insert(list, v) end
+        end
+        versions = list
+        loadingVersions = false
+
+        if #versions == 0 then
+            UI.setXml(buildUiXml("versions.json lists no valid versions"))
+            return
+        end
+
+        latestVersion = hasVersion(data.latest) and data.latest or versions[1]
+        if not hasVersion(selectedVersion) then
+            selectedVersion = latestVersion
+        end
+        versionsLoaded = true
+        UI.setXml(buildUiXml("Ready - pick a version and click Build"))
+    end, function(message)
+        loadingVersions = false
+        print("[Stratagems] " .. message)
+        UI.setXml(buildUiXml(message))
+    end)
+end
+
+-- ---------------------------------------------------------------------------
+-- build
+-- ---------------------------------------------------------------------------
+local function startBuild(v)
+    building = true
+    guidCounter = 0
+    deckCounter = 0
+    version  = v
+    BASE_URL = ROOT_URL .. version .. "/"
+    setStatus("Downloading " .. version .. " manifest...")
+
+    fetchJson(BASE_URL .. "manifest.json", "manifest.json", function(manifest)
+        setStatus("Building " .. version .. " bags...")
+        local ok, err = pcall(processManifest, manifest)
+        building = false
+        if not ok then
+            setStatus("Build error: " .. tostring(err))
+        end
+    end, function(message)
+        building = false
+        setStatus(message)
     end)
 end
 
@@ -231,35 +336,30 @@ function onBuildStratagems(player)
         return
     end
 
-    building = true
-    guidCounter = 0
-    deckCounter = 0
-    setStatus("Finding latest release...")
+    -- list failed to load (or is still loading): the button doubles as a retry
+    if not versionsLoaded then
+        loadVersions()
+        return
+    end
 
-    fetchJson(ROOT_URL .. "latest.json", "latest.json", function(latest)
-        -- folder name only, e.g. "v0.1" (letters, digits, dot, dash, underscore)
-        local v = tostring(latest.version or "")
-        if not string.match(v, "^[%w%.%-_]+$") then
-            building = false
-            setStatus("latest.json has no valid version")
-            return
-        end
-        version  = v
-        BASE_URL = ROOT_URL .. version .. "/"
-        setStatus("Downloading " .. version .. " manifest...")
-
-        fetchJson(BASE_URL .. "manifest.json", "manifest.json", function(manifest)
-            setStatus("Building " .. version .. " bags...")
-            local ok, err = pcall(processManifest, manifest)
-            building = false
-            if not ok then
-                setStatus("Build error: " .. tostring(err))
-            end
-        end)
-    end)
+    startBuild(selectedVersion)
 end
 
--- fallback if the button ever misbehaves: type  !stratagems  in chat
+-- Dropdown callback. TTS passes the selected option's text (e.g. "v0.1 (latest)");
+-- if it ever passes a 0-based index instead, map that back to the list.
+function onVersionChosen(player, value, id)
+    local v = string.match(tostring(value), "^(%S+)")
+    local index = tonumber(value)
+    if index and versions[index + 1] then
+        v = versions[index + 1]
+    end
+    if hasVersion(v) then
+        selectedVersion = v
+        setStatus("Selected " .. v .. " - click Build")
+    end
+end
+
+-- fallback if the button ever misbehaves: type  !stratagems  in chat (builds the selected version)
 function onChat(message, player)
     if message == "!stratagems" then
         onBuildStratagems(player)
@@ -268,5 +368,9 @@ function onChat(message, player)
 end
 
 function onLoad()
-    UI.setXml(buildUiXml())
+    if string.find(ROOT_URL, "YOUR_USER", 1, true) then
+        UI.setXml(buildUiXml("Edit ROOT_URL at top of Global script first"))
+        return
+    end
+    loadVersions()
 end
