@@ -1,0 +1,5837 @@
+{
+ "SaveName": "40K Stratagems (sample)",
+ "GameMode": "",
+ "Date": "",
+ "VersionNumber": "",
+ "GameType": "",
+ "GameComplexity": "",
+ "Tags": [],
+ "Gravity": 0.5,
+ "PlayArea": 0.5,
+ "Table": "",
+ "Sky": "",
+ "Note": "",
+ "TabStates": {},
+ "LuaScript": "",
+ "LuaScriptState": "",
+ "XmlUI": "",
+ "ObjectStates": [
+  {
+   "GUID": "df686c",
+   "Name": "Bag",
+   "Transform": {
+    "posX": 0.0,
+    "posY": 1.0,
+    "posZ": 0.0,
+    "rotX": 0,
+    "rotY": 0,
+    "rotZ": 0,
+    "scaleX": 1.0,
+    "scaleY": 1.0,
+    "scaleZ": 1.0
+   },
+   "Nickname": "Necrons - Stratagems",
+   "Description": "",
+   "GMNotes": "",
+   "AltLookAngle": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "ColorDiffuse": {
+    "r": 0.15,
+    "g": 0.25,
+    "b": 0.2
+   },
+   "LayoutGroupSortIndex": 0,
+   "Value": 0,
+   "Locked": false,
+   "Grid": true,
+   "Snap": true,
+   "IgnoreFoW": false,
+   "MeasureMovement": false,
+   "DragSelectable": true,
+   "Autoraise": true,
+   "Sticky": true,
+   "Tooltip": true,
+   "GridProjection": false,
+   "HideWhenFaceDown": false,
+   "Hands": false,
+   "LuaScript": "",
+   "LuaScriptState": "",
+   "XmlUI": "",
+   "ContainedObjects": [
+    {
+     "GUID": "715318",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Annihilation Legion",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "787dac",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Annihilation Legion Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+       ],
+       "CustomDeck": {
+        "1": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "2c09db",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Blood-fuelled Cruelty",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 100,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "db154d",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Insanity's Ire",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 101,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "f9c33a",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Masks of Death",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 102,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "6167d5",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Murderous Reanimation",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 103,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "324750",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Pitiless Hunters",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 104,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "6b1c9a",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "The Spoor of Frailty",
+         "Description": "necrons/annihilation-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 105,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "1": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/annihilation-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "6e79b4",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Awakened Dynasty",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "1c01f7",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Awakened Dynasty Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205
+       ],
+       "CustomDeck": {
+        "2": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "06e1cb",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Conquering Tyrant",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 200,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "1e1b5e",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Eternal Revenant",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 201,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "ac64a9",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Hungry Void",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 202,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "0020c7",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Sudden Storm",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 203,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "04f638",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Undying Legions",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 204,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "0464ba",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Protocol of the Vengeful Stars",
+         "Description": "necrons/awakened-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 205,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "2": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/awakened-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "1901c8",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Canoptek Court",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "458884",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Canoptek Court Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305
+       ],
+       "CustomDeck": {
+        "3": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "252b67",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Countertemporal Shift",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 300,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "3f806f",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Curse of the Cryptek",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 301,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "69ea08",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Cynosure of Eradication",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 302,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "d11107",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Reactive Subroutines",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 303,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "660d20",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Solar Pulse",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 304,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "0336c9",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Suboptimal Facade",
+         "Description": "necrons/canoptek-court",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 305,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "3": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/canoptek-court/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "4a3258",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Cryptek Conclave",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "017203",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Cryptek Conclave Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        400,
+        401,
+        402,
+        403,
+        404,
+        405
+       ],
+       "CustomDeck": {
+        "4": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "6ea8a9",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Animus Curse",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 400,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "0ba9fa",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Microscarab Swarm",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 401,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "dc7e38",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Molecular Targeting",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 402,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "6f221e",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Potentiality Syphon",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 403,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "464801",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Synergistic Empowerment",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 404,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "1a1328",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Untapped Power",
+         "Description": "necrons/cryptek-conclave",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 405,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "4": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cryptek-conclave/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "5a4a66",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Cursed Legion",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "0bb8a1",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Cursed Legion Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        500,
+        501,
+        502,
+        503,
+        504,
+        505
+       ],
+       "CustomDeck": {
+        "5": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "c01cf6",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Driven to Butchery",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 500,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "251f86",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Image of Death",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 501,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "10eb8f",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Methodical Murder",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 502,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "9dfcbd",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Mortis Protocols",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 503,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "b5ceed",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Spreading Madness",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 504,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "96341d",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Unnatural Aggression",
+         "Description": "necrons/cursed-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 505,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "5": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/cursed-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "180122",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Hand of the Dynasty",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "38128f",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Hand of the Dynasty Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        600,
+        601,
+        602
+       ],
+       "CustomDeck": {
+        "6": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hand-of-the-dynasty/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 1,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "692f33",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Dominance Protocols",
+         "Description": "necrons/hand-of-the-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 600,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "6": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hand-of-the-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "c0cd83",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Nanosaturation",
+         "Description": "necrons/hand-of-the-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 601,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "6": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hand-of-the-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "29fbd2",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Will of the Conqueror",
+         "Description": "necrons/hand-of-the-dynasty",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 602,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "6": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hand-of-the-dynasty/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "4ae2b6",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Hypercrypt Legion",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "7b9e6e",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Hypercrypt Legion Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        700,
+        701,
+        702,
+        703,
+        704,
+        705
+       ],
+       "CustomDeck": {
+        "7": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "b06d6f",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Cosmic Precision",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 700,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "72519f",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Dimensional Corridor",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 701,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "ffc5e6",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Entropic Damping",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 702,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "d8b572",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Hyperphasic Recall",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 703,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "5f9da8",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Quantum Deflection",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 704,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "8951a7",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Reanimation Crypts",
+         "Description": "necrons/hypercrypt-legion",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 705,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "7": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/hypercrypt-legion/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "6b166a",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Obeisance Phalanx",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "4c2870",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Obeisance Phalanx Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805
+       ],
+       "CustomDeck": {
+        "8": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "9dd019",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Enslaved Artifice",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 800,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "faf14c",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Nanoassembly Protocols",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 801,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "733a51",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Sentinels of Eternity",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 802,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "7f1c7c",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Suffer No Rival",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 803,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "32ec29",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Territorial Obsession",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 804,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "677d24",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Your Time Is Nigh",
+         "Description": "necrons/obeisance-phalanx",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 805,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "8": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/obeisance-phalanx/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "448b02",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Pantheon of Woe",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "311354",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Pantheon of Woe Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        900,
+        901,
+        902,
+        903,
+        904,
+        905
+       ],
+       "CustomDeck": {
+        "9": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "ea3e59",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Chronodistortion",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 900,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "4fa91a",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Disharmonisation Cascade",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 901,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "7cd8f5",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Entrophasic Aura Targeting",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 902,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "741e67",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Mass Transmogrification",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 903,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "42c74f",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Molecular Erosion",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 904,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "a69c22",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Phase Melding",
+         "Description": "necrons/pantheon-of-woe",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 905,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "9": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/pantheon-of-woe/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "f84266",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Skyshroud Spearhead",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "9ace80",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Skyshroud Spearhead Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        1000,
+        1001,
+        1002
+       ],
+       "CustomDeck": {
+        "10": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/skyshroud-spearhead/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 1,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "668b03",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Evasive Protocols",
+         "Description": "necrons/skyshroud-spearhead",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1000,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "10": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/skyshroud-spearhead/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "eb32e4",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Omnilocked Strafing",
+         "Description": "necrons/skyshroud-spearhead",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1001,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "10": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/skyshroud-spearhead/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "7d5e67",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Swift As Death",
+         "Description": "necrons/skyshroud-spearhead",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1002,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "10": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/skyshroud-spearhead/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "a5a6ae",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Starshatter Arsenal",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "14a921",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Starshatter Arsenal Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        1100,
+        1101,
+        1102,
+        1103,
+        1104,
+        1105
+       ],
+       "CustomDeck": {
+        "11": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 2,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "d1ef40",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Chronoshift",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1100,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "d9d72b",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Dimensional Tunnel",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1101,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "21d6b3",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Endless Servitude",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1102,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "160e74",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Merciless Reclamation",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1103,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "b03437",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Reactive Reposition",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1104,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "18a176",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Unyielding Forms",
+         "Description": "necrons/starshatter-arsenal",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1105,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "11": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/starshatter-arsenal/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 2,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "GUID": "73093c",
+     "Name": "Bag",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 0,
+      "rotZ": 0,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "The Phaeron's Armoury",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.25,
+      "g": 0.4,
+      "b": 0.35
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": false,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "ContainedObjects": [
+      {
+       "GUID": "aa5cb0",
+       "Name": "DeckCustom",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "The Phaeron's Armoury Stratagems",
+       "Description": "",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": false,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "DeckIDs": [
+        1200,
+        1201,
+        1202
+       ],
+       "CustomDeck": {
+        "12": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/the-phaerons-armoury/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 3,
+         "NumHeight": 1,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       },
+       "SidewaysCard": false,
+       "ContainedObjects": [
+        {
+         "GUID": "2c1cea",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Cosmic Storm",
+         "Description": "necrons/the-phaerons-armoury",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1200,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "12": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/the-phaerons-armoury/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "40bd46",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Particle Pulse",
+         "Description": "necrons/the-phaerons-armoury",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1201,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "12": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/the-phaerons-armoury/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        },
+        {
+         "GUID": "3971ff",
+         "Name": "Card",
+         "Transform": {
+          "posX": 0.0,
+          "posY": 1.0,
+          "posZ": 0.0,
+          "rotX": 0,
+          "rotY": 180,
+          "rotZ": 180,
+          "scaleX": 1.0,
+          "scaleY": 1.0,
+          "scaleZ": 1.0
+         },
+         "Nickname": "Subsurface Quantumweave",
+         "Description": "necrons/the-phaerons-armoury",
+         "GMNotes": "",
+         "AltLookAngle": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+         },
+         "ColorDiffuse": {
+          "r": 0.7,
+          "g": 0.7,
+          "b": 0.7
+         },
+         "LayoutGroupSortIndex": 0,
+         "Value": 0,
+         "Locked": false,
+         "Grid": true,
+         "Snap": true,
+         "IgnoreFoW": false,
+         "MeasureMovement": false,
+         "DragSelectable": true,
+         "Autoraise": true,
+         "Sticky": true,
+         "Tooltip": true,
+         "GridProjection": false,
+         "HideWhenFaceDown": true,
+         "Hands": true,
+         "LuaScript": "",
+         "LuaScriptState": "",
+         "XmlUI": "",
+         "CardID": 1202,
+         "SidewaysCard": false,
+         "CustomDeck": {
+          "12": {
+           "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/necrons/the-phaerons-armoury/_deck.png",
+           "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+           "NumWidth": 3,
+           "NumHeight": 1,
+           "BackIsHidden": true,
+           "UniqueBack": false,
+           "Type": 0
+          }
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "GUID": "ceb0a2",
+   "Name": "Bag",
+   "Transform": {
+    "posX": 4.0,
+    "posY": 1.0,
+    "posZ": 0.0,
+    "rotX": 0,
+    "rotY": 0,
+    "rotZ": 0,
+    "scaleX": 1.0,
+    "scaleY": 1.0,
+    "scaleZ": 1.0
+   },
+   "Nickname": "Core Stratagems",
+   "Description": "",
+   "GMNotes": "",
+   "AltLookAngle": {
+    "x": 0,
+    "y": 0,
+    "z": 0
+   },
+   "ColorDiffuse": {
+    "r": 0.5,
+    "g": 0.5,
+    "b": 0.5
+   },
+   "LayoutGroupSortIndex": 0,
+   "Value": 0,
+   "Locked": false,
+   "Grid": true,
+   "Snap": true,
+   "IgnoreFoW": false,
+   "MeasureMovement": false,
+   "DragSelectable": true,
+   "Autoraise": true,
+   "Sticky": true,
+   "Tooltip": true,
+   "GridProjection": false,
+   "HideWhenFaceDown": false,
+   "Hands": false,
+   "LuaScript": "",
+   "LuaScriptState": "",
+   "XmlUI": "",
+   "ContainedObjects": [
+    {
+     "GUID": "ba5bad",
+     "Name": "DeckCustom",
+     "Transform": {
+      "posX": 0.0,
+      "posY": 1.0,
+      "posZ": 0.0,
+      "rotX": 0,
+      "rotY": 180,
+      "rotZ": 180,
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "scaleZ": 1.0
+     },
+     "Nickname": "Core Stratagems Stratagems",
+     "Description": "",
+     "GMNotes": "",
+     "AltLookAngle": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+     },
+     "ColorDiffuse": {
+      "r": 0.7,
+      "g": 0.7,
+      "b": 0.7
+     },
+     "LayoutGroupSortIndex": 0,
+     "Value": 0,
+     "Locked": false,
+     "Grid": true,
+     "Snap": true,
+     "IgnoreFoW": false,
+     "MeasureMovement": false,
+     "DragSelectable": true,
+     "Autoraise": true,
+     "Sticky": true,
+     "Tooltip": true,
+     "GridProjection": false,
+     "HideWhenFaceDown": true,
+     "Hands": false,
+     "LuaScript": "",
+     "LuaScriptState": "",
+     "XmlUI": "",
+     "DeckIDs": [
+      1300,
+      1301,
+      1302,
+      1303,
+      1304,
+      1305,
+      1306,
+      1307,
+      1308,
+      1309,
+      1310
+     ],
+     "CustomDeck": {
+      "13": {
+       "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+       "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+       "NumWidth": 4,
+       "NumHeight": 3,
+       "BackIsHidden": true,
+       "UniqueBack": false,
+       "Type": 0
+      }
+     },
+     "SidewaysCard": false,
+     "ContainedObjects": [
+      {
+       "GUID": "a9ee43",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Command Re-roll",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1300,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "ad7b11",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Counteroffensive",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1301,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "592a94",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Crushing Impact",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1302,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "5b4e48",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Epic Challenge",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1303,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "fabef7",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Explosives",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1304,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "eba8fc",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Fire Overwatch",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1305,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "b367aa",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Heroic Intervention",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1306,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "0c4ac3",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Insane Bravery",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1307,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "12f03d",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "New Orders",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1308,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "4c5e7c",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Rapid Ingress",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1309,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      },
+      {
+       "GUID": "567558",
+       "Name": "Card",
+       "Transform": {
+        "posX": 0.0,
+        "posY": 1.0,
+        "posZ": 0.0,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+       },
+       "Nickname": "Smokescreen",
+       "Description": "core",
+       "GMNotes": "",
+       "AltLookAngle": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+       },
+       "ColorDiffuse": {
+        "r": 0.7,
+        "g": 0.7,
+        "b": 0.7
+       },
+       "LayoutGroupSortIndex": 0,
+       "Value": 0,
+       "Locked": false,
+       "Grid": true,
+       "Snap": true,
+       "IgnoreFoW": false,
+       "MeasureMovement": false,
+       "DragSelectable": true,
+       "Autoraise": true,
+       "Sticky": true,
+       "Tooltip": true,
+       "GridProjection": false,
+       "HideWhenFaceDown": true,
+       "Hands": true,
+       "LuaScript": "",
+       "LuaScriptState": "",
+       "XmlUI": "",
+       "CardID": 1310,
+       "SidewaysCard": false,
+       "CustomDeck": {
+        "13": {
+         "FaceURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/core/_deck.png",
+         "BackURL": "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-test-run/card_back.jpg",
+         "NumWidth": 4,
+         "NumHeight": 3,
+         "BackIsHidden": true,
+         "UniqueBack": false,
+         "Type": 0
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

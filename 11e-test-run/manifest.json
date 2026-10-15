@@ -14,42 +14,42 @@
               "name": "Blood-fuelled Cruelty",
               "file": "blood-fuelled_cruelty.png",
               "path": "necrons/annihilation-legion/blood-fuelled_cruelty.png",
-              "sha1": "785e6b4a72ea",
+              "sha1": "43149af9f500",
               "deck_index": 0
             },
             {
               "name": "Insanity's Ire",
               "file": "insanitys_ire.png",
               "path": "necrons/annihilation-legion/insanitys_ire.png",
-              "sha1": "0e669a3cb282",
+              "sha1": "21cca8172131",
               "deck_index": 1
             },
             {
               "name": "Masks of Death",
               "file": "masks_of_death.png",
               "path": "necrons/annihilation-legion/masks_of_death.png",
-              "sha1": "b41cfc3bdbdc",
+              "sha1": "1118c398f996",
               "deck_index": 2
             },
             {
               "name": "Murderous Reanimation",
               "file": "murderous_reanimation.png",
               "path": "necrons/annihilation-legion/murderous_reanimation.png",
-              "sha1": "2181656be4ef",
+              "sha1": "773d847f73ed",
               "deck_index": 3
             },
             {
               "name": "Pitiless Hunters",
               "file": "pitiless_hunters.png",
               "path": "necrons/annihilation-legion/pitiless_hunters.png",
-              "sha1": "a7d0e4927ab4",
+              "sha1": "2eab7801034c",
               "deck_index": 4
             },
             {
               "name": "The Spoor of Frailty",
               "file": "the_spoor_of_frailty.png",
               "path": "necrons/annihilation-legion/the_spoor_of_frailty.png",
-              "sha1": "5330ae2307be",
+              "sha1": "dd14e0cd4e2a",
               "deck_index": 5
             }
           ],
@@ -59,7 +59,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -72,42 +72,42 @@
               "name": "Protocol of the Conquering Tyrant",
               "file": "protocol_of_the_conquering_tyrant.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_conquering_tyrant.png",
-              "sha1": "d9db78b23d0c",
+              "sha1": "48959373e6f1",
               "deck_index": 0
             },
             {
               "name": "Protocol of the Eternal Revenant",
               "file": "protocol_of_the_eternal_revenant.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_eternal_revenant.png",
-              "sha1": "fa6a8494de09",
+              "sha1": "3cdca66a8189",
               "deck_index": 1
             },
             {
               "name": "Protocol of the Hungry Void",
               "file": "protocol_of_the_hungry_void.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_hungry_void.png",
-              "sha1": "7f5f2b785809",
+              "sha1": "9382fcfbaf9d",
               "deck_index": 2
             },
             {
               "name": "Protocol of the Sudden Storm",
               "file": "protocol_of_the_sudden_storm.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_sudden_storm.png",
-              "sha1": "534cdf42f630",
+              "sha1": "ac2b7722d79b",
               "deck_index": 3
             },
             {
               "name": "Protocol of the Undying Legions",
               "file": "protocol_of_the_undying_legions.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_undying_legions.png",
-              "sha1": "73e6d1c20447",
+              "sha1": "6d7917a726a1",
               "deck_index": 4
             },
             {
               "name": "Protocol of the Vengeful Stars",
               "file": "protocol_of_the_vengeful_stars.png",
               "path": "necrons/awakened-dynasty/protocol_of_the_vengeful_stars.png",
-              "sha1": "5ad57658338a",
+              "sha1": "d3cd5dc01c90",
               "deck_index": 5
             }
           ],
@@ -117,7 +117,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -130,42 +130,42 @@
               "name": "Countertemporal Shift",
               "file": "countertemporal_shift.png",
               "path": "necrons/canoptek-court/countertemporal_shift.png",
-              "sha1": "a8f68a55a64c",
+              "sha1": "0a9f12c54e6d",
               "deck_index": 0
             },
             {
               "name": "Curse of the Cryptek",
               "file": "curse_of_the_cryptek.png",
               "path": "necrons/canoptek-court/curse_of_the_cryptek.png",
-              "sha1": "b645b2be9389",
+              "sha1": "e9c478e44e05",
               "deck_index": 1
             },
             {
               "name": "Cynosure of Eradication",
               "file": "cynosure_of_eradication.png",
               "path": "necrons/canoptek-court/cynosure_of_eradication.png",
-              "sha1": "495301544c1a",
+              "sha1": "6166e0f4e634",
               "deck_index": 2
             },
             {
               "name": "Reactive Subroutines",
               "file": "reactive_subroutines.png",
               "path": "necrons/canoptek-court/reactive_subroutines.png",
-              "sha1": "f1bf9db011a0",
+              "sha1": "3b12f791c664",
               "deck_index": 3
             },
             {
               "name": "Solar Pulse",
               "file": "solar_pulse.png",
               "path": "necrons/canoptek-court/solar_pulse.png",
-              "sha1": "8f19b462642d",
+              "sha1": "fe0565292164",
               "deck_index": 4
             },
             {
               "name": "Suboptimal Facade",
               "file": "suboptimal_facade.png",
               "path": "necrons/canoptek-court/suboptimal_facade.png",
-              "sha1": "1b39f923540e",
+              "sha1": "0c842d557dd0",
               "deck_index": 5
             }
           ],
@@ -175,7 +175,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -188,42 +188,42 @@
               "name": "Animus Curse",
               "file": "animus_curse.png",
               "path": "necrons/cryptek-conclave/animus_curse.png",
-              "sha1": "5c5ed9c9cf4c",
+              "sha1": "750030873d15",
               "deck_index": 0
             },
             {
               "name": "Microscarab Swarm",
               "file": "microscarab_swarm.png",
               "path": "necrons/cryptek-conclave/microscarab_swarm.png",
-              "sha1": "53b5def38d6f",
+              "sha1": "6f95b0910f0c",
               "deck_index": 1
             },
             {
               "name": "Molecular Targeting",
               "file": "molecular_targeting.png",
               "path": "necrons/cryptek-conclave/molecular_targeting.png",
-              "sha1": "14b21900f5c6",
+              "sha1": "732388b9dac9",
               "deck_index": 2
             },
             {
               "name": "Potentiality Syphon",
               "file": "potentiality_syphon.png",
               "path": "necrons/cryptek-conclave/potentiality_syphon.png",
-              "sha1": "548d5e8a3c6c",
+              "sha1": "362622208129",
               "deck_index": 3
             },
             {
               "name": "Synergistic Empowerment",
               "file": "synergistic_empowerment.png",
               "path": "necrons/cryptek-conclave/synergistic_empowerment.png",
-              "sha1": "c425b2084bda",
+              "sha1": "8028762337f8",
               "deck_index": 4
             },
             {
               "name": "Untapped Power",
               "file": "untapped_power.png",
               "path": "necrons/cryptek-conclave/untapped_power.png",
-              "sha1": "9e38cd9c1d8a",
+              "sha1": "2f1bc29122e6",
               "deck_index": 5
             }
           ],
@@ -233,7 +233,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -246,42 +246,42 @@
               "name": "Driven to Butchery",
               "file": "driven_to_butchery.png",
               "path": "necrons/cursed-legion/driven_to_butchery.png",
-              "sha1": "6b84c919cb54",
+              "sha1": "e26f98c809d3",
               "deck_index": 0
             },
             {
               "name": "Image of Death",
               "file": "image_of_death.png",
               "path": "necrons/cursed-legion/image_of_death.png",
-              "sha1": "cc7e66490842",
+              "sha1": "6af41ad183c6",
               "deck_index": 1
             },
             {
               "name": "Methodical Murder",
               "file": "methodical_murder.png",
               "path": "necrons/cursed-legion/methodical_murder.png",
-              "sha1": "81c44058810c",
+              "sha1": "567921c02a3e",
               "deck_index": 2
             },
             {
               "name": "Mortis Protocols",
               "file": "mortis_protocols.png",
               "path": "necrons/cursed-legion/mortis_protocols.png",
-              "sha1": "5897b8d2ca39",
+              "sha1": "8543ee173833",
               "deck_index": 3
             },
             {
               "name": "Spreading Madness",
               "file": "spreading_madness.png",
               "path": "necrons/cursed-legion/spreading_madness.png",
-              "sha1": "ab97dbf625cb",
+              "sha1": "d5e0cdec3f40",
               "deck_index": 4
             },
             {
               "name": "Unnatural Aggression",
               "file": "unnatural_aggression.png",
               "path": "necrons/cursed-legion/unnatural_aggression.png",
-              "sha1": "72287a3ce1c9",
+              "sha1": "566f3a3aefaf",
               "deck_index": 5
             }
           ],
@@ -291,7 +291,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -304,21 +304,21 @@
               "name": "Dominance Protocols",
               "file": "dominance_protocols.png",
               "path": "necrons/hand-of-the-dynasty/dominance_protocols.png",
-              "sha1": "62c9405904ef",
+              "sha1": "d5e90d6d8b61",
               "deck_index": 0
             },
             {
               "name": "Nanosaturation",
               "file": "nanosaturation.png",
               "path": "necrons/hand-of-the-dynasty/nanosaturation.png",
-              "sha1": "c9f559642901",
+              "sha1": "c91af426a2c5",
               "deck_index": 1
             },
             {
               "name": "Will of the Conqueror",
               "file": "will_of_the_conqueror.png",
               "path": "necrons/hand-of-the-dynasty/will_of_the_conqueror.png",
-              "sha1": "b16452e4bfec",
+              "sha1": "3c6083e393ce",
               "deck_index": 2
             }
           ],
@@ -328,7 +328,7 @@
             "rows": 1,
             "sheet_px": [
               1170,
-              735
+              687
             ],
             "count": 3
           }
@@ -341,42 +341,42 @@
               "name": "Cosmic Precision",
               "file": "cosmic_precision.png",
               "path": "necrons/hypercrypt-legion/cosmic_precision.png",
-              "sha1": "f20ae2785a59",
+              "sha1": "202e159027ea",
               "deck_index": 0
             },
             {
               "name": "Dimensional Corridor",
               "file": "dimensional_corridor.png",
               "path": "necrons/hypercrypt-legion/dimensional_corridor.png",
-              "sha1": "81e89feecbb9",
+              "sha1": "701aef8808e4",
               "deck_index": 1
             },
             {
               "name": "Entropic Damping",
               "file": "entropic_damping.png",
               "path": "necrons/hypercrypt-legion/entropic_damping.png",
-              "sha1": "307d3577a1cd",
+              "sha1": "e846f0c16bf4",
               "deck_index": 2
             },
             {
               "name": "Hyperphasic Recall",
               "file": "hyperphasic_recall.png",
               "path": "necrons/hypercrypt-legion/hyperphasic_recall.png",
-              "sha1": "a80c015432a3",
+              "sha1": "d040d8804e50",
               "deck_index": 3
             },
             {
               "name": "Quantum Deflection",
               "file": "quantum_deflection.png",
               "path": "necrons/hypercrypt-legion/quantum_deflection.png",
-              "sha1": "127c63660097",
+              "sha1": "0595e125e66e",
               "deck_index": 4
             },
             {
               "name": "Reanimation Crypts",
               "file": "reanimation_crypts.png",
               "path": "necrons/hypercrypt-legion/reanimation_crypts.png",
-              "sha1": "bd71eef567b2",
+              "sha1": "1e36b5599092",
               "deck_index": 5
             }
           ],
@@ -386,7 +386,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -399,42 +399,42 @@
               "name": "Enslaved Artifice",
               "file": "enslaved_artifice.png",
               "path": "necrons/obeisance-phalanx/enslaved_artifice.png",
-              "sha1": "d85b0eb74026",
+              "sha1": "e5a52dfe14c9",
               "deck_index": 0
             },
             {
               "name": "Nanoassembly Protocols",
               "file": "nanoassembly_protocols.png",
               "path": "necrons/obeisance-phalanx/nanoassembly_protocols.png",
-              "sha1": "25b84a27b12a",
+              "sha1": "30a61db1408c",
               "deck_index": 1
             },
             {
               "name": "Sentinels of Eternity",
               "file": "sentinels_of_eternity.png",
               "path": "necrons/obeisance-phalanx/sentinels_of_eternity.png",
-              "sha1": "ea11630dd760",
+              "sha1": "aa149d688715",
               "deck_index": 2
             },
             {
               "name": "Suffer No Rival",
               "file": "suffer_no_rival.png",
               "path": "necrons/obeisance-phalanx/suffer_no_rival.png",
-              "sha1": "cd5cfcb23dc3",
+              "sha1": "b55e7fe2f5cc",
               "deck_index": 3
             },
             {
               "name": "Territorial Obsession",
               "file": "territorial_obsession.png",
               "path": "necrons/obeisance-phalanx/territorial_obsession.png",
-              "sha1": "9256945af409",
+              "sha1": "d01937201097",
               "deck_index": 4
             },
             {
               "name": "Your Time Is Nigh",
               "file": "your_time_is_nigh.png",
               "path": "necrons/obeisance-phalanx/your_time_is_nigh.png",
-              "sha1": "0c0b5cb034b1",
+              "sha1": "46252a20213e",
               "deck_index": 5
             }
           ],
@@ -444,7 +444,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -457,42 +457,42 @@
               "name": "Chronodistortion",
               "file": "chronodistortion.png",
               "path": "necrons/pantheon-of-woe/chronodistortion.png",
-              "sha1": "ac7d18eb9f5b",
+              "sha1": "64c654a1dbd3",
               "deck_index": 0
             },
             {
               "name": "Disharmonisation Cascade",
               "file": "disharmonisation_cascade.png",
               "path": "necrons/pantheon-of-woe/disharmonisation_cascade.png",
-              "sha1": "97ab145d78b3",
+              "sha1": "be87b4b00c35",
               "deck_index": 1
             },
             {
               "name": "Entrophasic Aura Targeting",
               "file": "entrophasic_aura_targeting.png",
               "path": "necrons/pantheon-of-woe/entrophasic_aura_targeting.png",
-              "sha1": "ab536bcafd21",
+              "sha1": "a410cfc3e2c6",
               "deck_index": 2
             },
             {
               "name": "Mass Transmogrification",
               "file": "mass_transmogrification.png",
               "path": "necrons/pantheon-of-woe/mass_transmogrification.png",
-              "sha1": "4d7870d5715b",
+              "sha1": "62975d3148ea",
               "deck_index": 3
             },
             {
               "name": "Molecular Erosion",
               "file": "molecular_erosion.png",
               "path": "necrons/pantheon-of-woe/molecular_erosion.png",
-              "sha1": "14a5134aa9fe",
+              "sha1": "a9bb0e596c18",
               "deck_index": 4
             },
             {
               "name": "Phase Melding",
               "file": "phase_melding.png",
               "path": "necrons/pantheon-of-woe/phase_melding.png",
-              "sha1": "3aeab453fe67",
+              "sha1": "bd2dac205976",
               "deck_index": 5
             }
           ],
@@ -502,7 +502,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -515,21 +515,21 @@
               "name": "Evasive Protocols",
               "file": "evasive_protocols.png",
               "path": "necrons/skyshroud-spearhead/evasive_protocols.png",
-              "sha1": "5d64884f8106",
+              "sha1": "98fa99610881",
               "deck_index": 0
             },
             {
               "name": "Omnilocked Strafing",
               "file": "omnilocked_strafing.png",
               "path": "necrons/skyshroud-spearhead/omnilocked_strafing.png",
-              "sha1": "32c8910c82a0",
+              "sha1": "1b1af06192d5",
               "deck_index": 1
             },
             {
               "name": "Swift As Death",
               "file": "swift_as_death.png",
               "path": "necrons/skyshroud-spearhead/swift_as_death.png",
-              "sha1": "62ce58cf42fd",
+              "sha1": "9cd177099eab",
               "deck_index": 2
             }
           ],
@@ -539,7 +539,7 @@
             "rows": 1,
             "sheet_px": [
               1170,
-              735
+              687
             ],
             "count": 3
           }
@@ -552,42 +552,42 @@
               "name": "Chronoshift",
               "file": "chronoshift.png",
               "path": "necrons/starshatter-arsenal/chronoshift.png",
-              "sha1": "0e068a5ef482",
+              "sha1": "61c5d6dae91b",
               "deck_index": 0
             },
             {
               "name": "Dimensional Tunnel",
               "file": "dimensional_tunnel.png",
               "path": "necrons/starshatter-arsenal/dimensional_tunnel.png",
-              "sha1": "5ffbc12358b7",
+              "sha1": "91de41b801da",
               "deck_index": 1
             },
             {
               "name": "Endless Servitude",
               "file": "endless_servitude.png",
               "path": "necrons/starshatter-arsenal/endless_servitude.png",
-              "sha1": "e29fc78859c1",
+              "sha1": "0db9d41b067a",
               "deck_index": 2
             },
             {
               "name": "Merciless Reclamation",
               "file": "merciless_reclamation.png",
               "path": "necrons/starshatter-arsenal/merciless_reclamation.png",
-              "sha1": "d30ce25c63cf",
+              "sha1": "7f3aeccc195a",
               "deck_index": 3
             },
             {
               "name": "Reactive Reposition",
               "file": "reactive_reposition.png",
               "path": "necrons/starshatter-arsenal/reactive_reposition.png",
-              "sha1": "24c903c336b5",
+              "sha1": "c78f242f6152",
               "deck_index": 4
             },
             {
               "name": "Unyielding Forms",
               "file": "unyielding_forms.png",
               "path": "necrons/starshatter-arsenal/unyielding_forms.png",
-              "sha1": "51d6d6d0b6ec",
+              "sha1": "2bb48881c6da",
               "deck_index": 5
             }
           ],
@@ -597,7 +597,7 @@
             "rows": 2,
             "sheet_px": [
               1170,
-              1470
+              1374
             ],
             "count": 6
           }
@@ -610,21 +610,21 @@
               "name": "Cosmic Storm",
               "file": "cosmic_storm.png",
               "path": "necrons/the-phaerons-armoury/cosmic_storm.png",
-              "sha1": "04896214ff62",
+              "sha1": "67aa9514c597",
               "deck_index": 0
             },
             {
               "name": "Particle Pulse",
               "file": "particle_pulse.png",
               "path": "necrons/the-phaerons-armoury/particle_pulse.png",
-              "sha1": "117ddd689a74",
+              "sha1": "9057baccacbe",
               "deck_index": 1
             },
             {
               "name": "Subsurface Quantumweave",
               "file": "subsurface_quantumweave.png",
               "path": "necrons/the-phaerons-armoury/subsurface_quantumweave.png",
-              "sha1": "12f1e0708a89",
+              "sha1": "895d52ac29ce",
               "deck_index": 2
             }
           ],
@@ -634,7 +634,7 @@
             "rows": 1,
             "sheet_px": [
               1170,
-              735
+              687
             ],
             "count": 3
           }
@@ -650,77 +650,77 @@
         "name": "Command Re-roll",
         "file": "command_re-roll.png",
         "path": "core/command_re-roll.png",
-        "sha1": "bdaab95397c5",
+        "sha1": "ef64884ca3b8",
         "deck_index": 0
       },
       {
         "name": "Counteroffensive",
         "file": "counteroffensive.png",
         "path": "core/counteroffensive.png",
-        "sha1": "3be7ccebb88f",
+        "sha1": "39ce52084aee",
         "deck_index": 1
       },
       {
         "name": "Crushing Impact",
         "file": "crushing_impact.png",
         "path": "core/crushing_impact.png",
-        "sha1": "cd6759ec40ed",
+        "sha1": "1156d9932b41",
         "deck_index": 2
       },
       {
         "name": "Epic Challenge",
         "file": "epic_challenge.png",
         "path": "core/epic_challenge.png",
-        "sha1": "4ae84a165ef9",
+        "sha1": "3a15805481bb",
         "deck_index": 3
       },
       {
         "name": "Explosives",
         "file": "explosives.png",
         "path": "core/explosives.png",
-        "sha1": "7bc29e82b730",
+        "sha1": "2740274e2664",
         "deck_index": 4
       },
       {
         "name": "Fire Overwatch",
         "file": "fire_overwatch.png",
         "path": "core/fire_overwatch.png",
-        "sha1": "3a478c8faaa7",
+        "sha1": "ce53ab200d39",
         "deck_index": 5
       },
       {
         "name": "Heroic Intervention",
         "file": "heroic_intervention.png",
         "path": "core/heroic_intervention.png",
-        "sha1": "ff8ac1b51430",
+        "sha1": "6016038d95f0",
         "deck_index": 6
       },
       {
         "name": "Insane Bravery",
         "file": "insane_bravery.png",
         "path": "core/insane_bravery.png",
-        "sha1": "03f42d1b59b7",
+        "sha1": "5960d3ed103d",
         "deck_index": 7
       },
       {
         "name": "New Orders",
         "file": "new_orders.png",
         "path": "core/new_orders.png",
-        "sha1": "1cbee06cfab2",
+        "sha1": "e9bffcad4e35",
         "deck_index": 8
       },
       {
         "name": "Rapid Ingress",
         "file": "rapid_ingress.png",
         "path": "core/rapid_ingress.png",
-        "sha1": "1c5b32f22f0a",
+        "sha1": "1271f43f88d5",
         "deck_index": 9
       },
       {
         "name": "Smokescreen",
         "file": "smokescreen.png",
         "path": "core/smokescreen.png",
-        "sha1": "8c9b43172f79",
+        "sha1": "a6f0fd4eb9e0",
         "deck_index": 10
       }
     ],
@@ -730,7 +730,7 @@
       "rows": 3,
       "sheet_px": [
         1560,
-        2205
+        2061
       ],
       "count": 11
     }
