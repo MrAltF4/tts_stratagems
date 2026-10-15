@@ -2,7 +2,7 @@
   "_about": "game-datacards faction name -> name shown in TTS. Left side must match the folder name in the pulled zip exactly. build_release.py warns if a left-hand name isn't found (e.g. game-datacards renamed it).",
   "renames": {
     "Adeptus Astartes": "Adeptus Astartes (Space Marines)",
-    "Asuryani": "Aeldari",
+    "Asuryani": "Aeldari (Eldar)",
     "Heretic Astartes": "Chaos Space Marines",
     "Legiones Daemonica": "Chaos Daemons"
   }
