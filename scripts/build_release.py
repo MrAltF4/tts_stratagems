@@ -44,7 +44,7 @@ import sys
 import unicodedata
 import zipfile
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -123,15 +123,47 @@ def stitch(card_bytes, dest):
     return cols, rows, sheet.size
 
 
-def fit_back(path, size, dest):
-    """Resize the back to the card width and crop to card height (biased to keep the logo at top)."""
+PLAQUE_FONTS = ["segoeuib.ttf", "arialbd.ttf", "DejaVuSans-Bold.ttf"]   # first one found wins
+PLAQUE_GOLD = (201, 162, 74)
+
+
+def plaque_font(size):
+    for name in PLAQUE_FONTS:
+        for p in (name, os.path.join(os.environ.get("WINDIR", "C:/Windows"), "Fonts", name)):
+            try:
+                return ImageFont.truetype(p, size)
+            except OSError:
+                pass
+    return ImageFont.load_default(size)
+
+
+def draw_plaque(im, text):
+    """Gold-edged dark plaque, bottom centre, sized relative to the card width."""
+    s = im.width / 390   # tuned on a 390px-wide card
+    over = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    f = plaque_font(round(15 * s))
+    l, t, r, b = d.textbbox((0, 0), text, font=f)
+    tw, th = r - l, b - t
+    pw, ph = tw + round(28 * s), th + round(14 * s)
+    px, py = (im.width - pw) // 2, im.height - round(18 * s) - ph
+    d.rounded_rectangle((px, py, px + pw, py + ph), radius=round(6 * s), fill=(12, 22, 38, 225),
+                        outline=PLAQUE_GOLD, width=max(1, round(2 * s)))
+    d.text((px + (pw - tw) // 2 - l, py + (ph - th) // 2 - t), text, font=f, fill=(225, 230, 240))
+    return Image.alpha_composite(im.convert("RGBA"), over).convert("RGB")
+
+
+def fit_back(path, size, dest, version):
+    """Resize the back to the card width and crop to card height (biased to keep the logo at top),
+    then print the data version on it."""
     cw, ch = size
     b = Image.open(path).convert("RGB")
     b = b.resize((cw, round(b.height * cw / b.width)), Image.LANCZOS)
     if b.height < ch:
         b = b.resize((cw, ch), Image.LANCZOS)
     top = round(max(0, b.height - ch) * 0.3)
-    b.crop((0, top, cw, top + ch)).save(dest, quality=92)
+    b = b.crop((0, top, cw, top + ch))
+    draw_plaque(b, f"DATASET {version}").save(dest, quality=92)
 
 
 # ---------------------------------------------------------------------------
@@ -323,7 +355,7 @@ def build(factions, core, out, card_back, version, data_versions, with_cards, re
     manifest["core"] = {"name": "Core Stratagems", "slug": "core",
                         **write_group(os.path.join(out, "core"), "core", core, box, problems, with_cards)}
 
-    fit_back(card_back, card_size, os.path.join(out, "card_back.jpg"))
+    fit_back(card_back, card_size, os.path.join(out, "card_back.jpg"), version)
 
     # build id: changes whenever any image changes; the TTS script appends ?v=<build> to image URLs
     # so TTS (which caches by URL) always fetches changed art

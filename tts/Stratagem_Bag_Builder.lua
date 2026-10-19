@@ -24,7 +24,7 @@
 ]]
 
 local ROOT_URL    = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-stratagems/"
-local MOD_VERSION = "v0.3.2"
+local MOD_VERSION = "v0.4.0"
 
 -- ---------------------------------------------------------------------------
 -- state

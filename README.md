@@ -84,7 +84,8 @@ Double-click **build_release.bat**. It reads everything in `scripts\input` and:
   top of `tts\Stratagem_Bag_Builder.lua`; bump it whenever you change how cards are made.
   It doesn't get its own folder.
 
-Both are shown, colour-coded, in the name of the bag TTS spawns.
+Both are shown, colour-coded, in the name of the bag TTS spawns. The data version is also
+printed on the card back (a small "DATASET v981" plaque at the bottom), added by the build.
 
 Each release holds one `_deck.png` sheet per detachment (all its cards in a grid), the card
 back and a `manifest.json` listing every card. That's all TTS needs. Individual card images
