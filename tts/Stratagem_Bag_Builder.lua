@@ -47,6 +47,14 @@ local MASTER_COLOUR  = { r = 0.60, g = 0.10, b = 0.10 }
 
 local SPAWN_POSITION = { x = 0, y = 3, z = 0 }   -- where the master bag appears (table centre)
 
+-- credit text shown in the master bag's Description (TTS BBCode)
+local MASTER_DESCRIPTION = [=[
+Stratagems generated via game-datacards.eu,
+
+by [b]MrAltF4[/b], using their mod:
+
+[b]Stratagem Automation[/b]:  https://steamcommunity.com/sharedfiles/filedetails/?id=3820338475]=]
+
 local BTN_COLORS     = "#0D2B40FF|#1A5C8AFF|#0A1F2EFF|#333333AA"
 local BTN_TEXT_COLOR = "#3CCCFF"
 
@@ -248,7 +256,9 @@ local function processManifest(manifest)
         cardTotal = cardTotal + #manifest.core.cards
     end
 
-    spawnMaster(makeBag("40K Stratagems - 11e " .. version, MASTER_COLOUR, bagList))
+    local master = makeBag("40K Stratagems - 11e " .. version, MASTER_COLOUR, bagList)
+    master.Description = MASTER_DESCRIPTION
+    spawnMaster(master)
     setStatus(version .. ": 1 bag holding " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
 end
 
