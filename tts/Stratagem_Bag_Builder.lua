@@ -24,7 +24,7 @@
 ]]
 
 local ROOT_URL    = "https://raw.githubusercontent.com/MrAltF4/tts_stratagems/main/11e-stratagems/"
-local MOD_VERSION = "v0.3.1"
+local MOD_VERSION = "v0.3.2"
 
 -- ---------------------------------------------------------------------------
 -- state
@@ -44,8 +44,39 @@ local deckCounter = 0
 local cardBackUrl = ""
 local assetBuild  = ""   -- from manifest; appended to image URLs so TTS never reuses a stale cached image
 
-local FACTION_COLOUR = { r = 0.15, g = 0.25, b = 0.20 }
-local DET_COLOUR     = { r = 0.25, g = 0.40, b = 0.35 }
+local FACTION_COLOUR = { r = 0.15, g = 0.25, b = 0.20 }   -- fallback for a faction missing below
+
+-- faction bag colours (hex), keyed by the faction name in the manifest; detachment bags use a shade of it
+local FACTION_HEX = {
+    ["Adepta Sororitas"]                 = "8E1B2E",
+    ["Adeptus Astartes (Space Marines)"] = "1E4BA0",
+    ["Adeptus Custodes"]                 = "C99A2E",
+    ["Adeptus Mechanicus"]               = "B5401D",
+    ["Aeldari (Eldar)"]                  = "1E8C7E",
+    ["Agents of the Imperium"]           = "5A1E2A",
+    ["Astra Militarum"]                  = "6F7446",
+    ["Black Templars"]                   = "DCD6C4",
+    ["Blood Angels"]                     = "A30F14",
+    ["Chaos Daemons"]                    = "5E2A7A",
+    ["Chaos Knights"]                    = "6E5A3A",
+    ["Chaos Space Marines"]              = "1C1C1C",
+    ["Dark Angels"]                      = "1C4A2A",
+    ["Death Guard"]                      = "8A9A3A",
+    ["Deathwatch"]                       = "4A5058",
+    ["Drukhari"]                         = "2E3F4A",
+    ["Emperor's Children"]               = "D0359A",
+    ["Genestealer Cults"]                = "6A5AC8",
+    ["Grey Knights"]                     = "9AA8B8",
+    ["Imperial Knights"]                 = "E0B522",
+    ["Leagues of Votann"]                = "D9731E",
+    ["Necrons"]                          = "3CC24A",
+    ["Orks"]                             = "4F7A1F",
+    ["Space Wolves"]                     = "6C8FB0",
+    ["T'au Empire"]                      = "C88A44",
+    ["Thousand Sons"]                    = "1A93B8",
+    ["Tyranids"]                         = "9C3FB8",
+    ["World Eaters"]                     = "C2261C",
+}
 local CORE_COLOUR    = { r = 0.50, g = 0.50, b = 0.50 }
 local MASTER_COLOUR  = { r = 0.60, g = 0.10, b = 0.10 }
 
@@ -63,7 +94,7 @@ by [b]MrAltF4[/b], using their mod:
 local DATA_VERSION_COLOUR = "DB9191"
 local MOD_VERSION_COLOUR  = "2279DF"
 local NAME_GAP            = string.rep(" ", 32)   -- master bag name: title, gap, then the versions
-local BULLET              = "\226\128\162 "      -- build summary list marker (UTF-8 bullet)
+local BULLET              = "- "                  -- build summary list marker
 
 local BTN_COLORS     = "#0D2B40FF|#1A5C8AFF|#0A1F2EFF|#333333AA"
 local BTN_TEXT_COLOR = "#3CCCFF"
@@ -226,13 +257,35 @@ local function makeBag(nickname, colour, contents)
     return bag
 end
 
+-- "8E1B2E" -> { r, g, b } in 0..1
+local function hexColour(hex)
+    return {
+        r = tonumber(string.sub(hex, 1, 2), 16) / 255,
+        g = tonumber(string.sub(hex, 3, 4), 16) / 255,
+        b = tonumber(string.sub(hex, 5, 6), 16) / 255,
+    }
+end
+
+-- detachment bags: the faction colour lightened (dark colours) or darkened (light colours)
+local function shade(c)
+    local lum = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b
+    local function step(x)
+        if lum > 0.6 then return x * 0.82 end
+        return x + (1 - x) * 0.25
+    end
+    return { r = step(c.r), g = step(c.g), b = step(c.b) }
+end
+
 local function buildFactionBag(faction)
+    local hex = FACTION_HEX[faction.name]
+    local colour = hex and hexColour(hex) or FACTION_COLOUR
+    local detColour = shade(colour)
     local detachmentBags = {}
     for _, det in ipairs(faction.detachments) do
         local deck = makeDeck(det, det.name .. " Stratagems")
-        table.insert(detachmentBags, makeBag(det.name, DET_COLOUR, { deck }))
+        table.insert(detachmentBags, makeBag(det.name, detColour, { deck }))
     end
-    return makeBag(faction.name .. " - Stratagems", FACTION_COLOUR, detachmentBags)
+    return makeBag(faction.name .. " - Stratagems", colour, detachmentBags)
 end
 
 -- ---------------------------------------------------------------------------
