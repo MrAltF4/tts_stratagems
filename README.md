@@ -65,15 +65,26 @@ Double-click **build_release.bat**. It reads everything in `scripts\input` and:
 1. prints a summary (factions, detachments, cards, and the game-datacards data version) and
    stops with a clear message if anything doesn't add up, for example a zip with fewer cards
    than the data says it should have (just run pull_all.bat again);
-2. asks for the **new version** number, suggesting the next one (press Enter to accept it,
-   or type your own, e.g. `v1.0`). Use `v0.x` while testing and `v1.0` onwards once it's
-   released. A version that already exists is never overwritten;
-3. asks whether the new version should be the **latest**, which is the one TTS picks by
+2. names the release after the **game-datacards data version** the cards came from (e.g.
+   `981`), so the TTS dropdown always matches game-datacards. If that data version is
+   already published it asks whether to **replace** it: say yes only when you've changed
+   how the cards are built (a mod change) and want to republish the same data;
+3. asks whether it should be the **latest**, which is the one TTS picks by
    default. Answer **n** if you want to try it in TTS first: it still appears in the TTS
-   Version dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
+   Data dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
    in `11e-stratagems\versions.json`;
-4. asks you to confirm, then builds `11e-stratagems\<version>\` (about 260 files, ~40 MB) and
-   adds the version to `11e-stratagems\versions.json`.
+4. asks you to confirm, then builds `11e-stratagems\<data version>\` (about 260 files, ~40 MB)
+   and adds it to `11e-stratagems\versions.json`.
+
+### Data version vs mod version
+
+- **Data version** (e.g. `981`): game-datacards' own number for its data. It changes when
+  they update the rules text. It's the release folder name and what the TTS dropdown shows.
+- **Mod version** (e.g. `v0.3.1`): how this mod builds the cards. It's `MOD_VERSION` at the
+  top of `tts\Stratagem_Bag_Builder.lua`; bump it whenever you change how cards are made.
+  It doesn't get its own folder.
+
+Both are shown, colour-coded, in the name of the bag TTS spawns.
 
 Each release holds one `_deck.png` sheet per detachment (all its cards in a grid), the card
 back and a `manifest.json` listing every card. That's all TTS needs. Individual card images

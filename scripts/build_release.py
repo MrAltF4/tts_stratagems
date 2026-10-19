@@ -1,16 +1,21 @@
 """
-Build a release: every pulled zip in scripts/input -> 11e-stratagems/<version>/ + versions.json.
+Build a release: every pulled zip in scripts/input -> 11e-stratagems/<data version>/ + versions.json.
 
-    python -I build_release.py                      (asks for the version and whether it's latest)
-    python -I build_release.py --version v0.2 --latest --yes
-    python -I build_release.py --version v0.3 --no-latest --yes
+    python -I build_release.py                      (asks whether it's latest / to replace)
+    python -I build_release.py --latest --yes
+    python -I build_release.py --replace --yes      (rebuild a data version after mod changes)
+
+Releases are named after the game-datacards data version the cards came from (e.g. 981), so
+the TTS dropdown always matches game-datacards. How the cards are built is the *mod* version,
+which lives in tts/Stratagem_Bag_Builder.lua (MOD_VERSION) and never gets its own folder:
+a mod change that alters the images means rebuilding the same data version with --replace.
 
 Options:
     --input DIR       pulled zips + .source.json files       (default: scripts/input)
     --root DIR        hosted folder holding versions.json    (default: 11e-stratagems)
     --card-back FILE  card back image                        (default: assets/card_back_original.jpg)
-    --version vX.Y    release folder name                    (default: asks, suggesting the next one)
     --latest / --no-latest   make it the TTS default or not  (default: asks)
+    --replace         rebuild a data version that's already published (default: asks)
     --yes             don't ask for confirmation before writing
     --with-cards      also publish every card as its own PNG (off by default: TTS only uses the
                       _deck.png sheets, and the singles more than double the release size)
@@ -22,9 +27,9 @@ What it does:
   - crops the transparent band off every card, fits the card back to the same shape
   - cleans names: strips the _1/_2 game-datacards adds to repeated stratagems, plain-ASCII slugs
   - renames factions to their common names for TTS (scripts/faction_names.json, e.g. Asuryani -> Aeldari)
-  - writes <root>/<version>/ (_deck.png sheets, card_back.jpg, manifest.json; single cards with --with-cards)
-  - adds the version to <root>/versions.json (and sets it as latest if asked)
-It never overwrites an existing version folder and never touches GitHub; you commit and push.
+  - writes <root>/<data version>/ (_deck.png sheets, card_back.jpg, manifest.json; single cards with --with-cards)
+  - adds the data version to <root>/versions.json (and sets it as latest if asked)
+It only replaces an existing data version when told to, and never touches GitHub; you commit and push.
 """
 import argparse
 import collections
@@ -44,7 +49,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 SMALL = {"of", "the", "to", "a", "an", "and", "in", "on", "for", "at", "by"}
-VERSION_RE = re.compile(r"^v(\d+)\.(\d+)$")
+VERSION_RE = re.compile(r"^\d+$")   # game-datacards data version, e.g. 981
 
 
 class BuildError(Exception):
@@ -133,8 +138,7 @@ def fit_back(path, size, dest):
 # versions
 # ---------------------------------------------------------------------------
 def version_key(v):
-    m = VERSION_RE.match(v)
-    return (int(m.group(1)), int(m.group(2))) if m else (-1, -1)
+    return int(v) if VERSION_RE.match(str(v)) else -1
 
 
 def load_versions(root):
@@ -146,14 +150,6 @@ def load_versions(root):
     data.setdefault("versions", [])
     data.setdefault("latest", None)
     return path, data
-
-
-def suggest_version(versions):
-    known = [version_key(v) for v in versions if VERSION_RE.match(v)]
-    if not known:
-        return "v0.1"
-    major, minor = max(known)
-    return f"v{major}.{minor + 1}"
 
 
 # ---------------------------------------------------------------------------
@@ -221,8 +217,11 @@ def read_input(indir):
 
     data_versions = sorted({f["source"].get("data_version") for f in factions.values()} - {None})
     if len(data_versions) > 1:
-        warnings.append(f"zips come from different game-datacards data versions {data_versions} "
-                        "- consider re-pulling everything")
+        problems.append(f"zips come from different game-datacards data versions {data_versions} "
+                        "- re-pull everything so they match")
+    elif not data_versions:
+        problems.append("no game-datacards data version found (.source.json files missing?) "
+                        "- pull with pull_all.bat")
     return factions, core, skipped, problems, warnings, data_versions
 
 
@@ -283,7 +282,7 @@ def build(factions, core, out, card_back, version, data_versions, with_cards, re
         "card_back": "card_back.jpg",
         "source": {
             "name": "game-datacards.eu",
-            "data_version": data_versions[0] if len(data_versions) == 1 else data_versions,
+            "data_version": data_versions[0],
             "site_version": next((s.get("site_version") for s in sources if s.get("site_version")), None),
             "pulled_from": min((s["pulled_at"] for s in sources if s.get("pulled_at")), default=None),
             "pulled_to": max((s["pulled_at"] for s in sources if s.get("pulled_at")), default=None),
@@ -401,7 +400,7 @@ def main(argv):
     p.add_argument("--input", default=os.path.join(HERE, "input"))
     p.add_argument("--root", default=os.path.join(REPO, "11e-stratagems"))
     p.add_argument("--card-back", default=os.path.join(REPO, "assets", "card_back_original.jpg"))
-    p.add_argument("--version")
+    p.add_argument("--replace", dest="replace", action="store_true", default=None)
     p.add_argument("--latest", dest="latest", action="store_true", default=None)
     p.add_argument("--no-latest", dest="latest", action="store_false")
     p.add_argument("--yes", action="store_true")
@@ -436,37 +435,38 @@ def main(argv):
             print(f"  - {pr}")
         return 1
 
-    print(f"\nExisting versions: {', '.join(versions['versions']) or 'none'}"
+    print(f"\nExisting data versions: {', '.join(versions['versions']) or 'none'}"
           f"   (latest: {versions['latest'] or 'none'})")
-    version = args.version
-    while True:
-        if version is None:
-            version = ask("New version", suggest_version(versions["versions"]))
-        if not VERSION_RE.match(version or ""):
-            print("  Use the form v<number>.<number>, e.g. v0.2 or v1.0")
-        elif version in versions["versions"] or os.path.exists(os.path.join(args.root, version)):
-            print(f"  {version} already exists - pick another (published versions are never overwritten)")
-        else:
-            break
-        if args.version:
+    version = str(data_versions[0])
+    out = os.path.join(args.root, version)
+    exists = os.path.exists(out)
+    if exists:
+        replace = args.replace
+        if replace is None:
+            replace = ask_yes_no(f"Data {version} is already published. Replace it with this build "
+                                 "(same data, rebuilt after mod changes)?", False)
+        if not replace:
+            print("Cancelled - nothing was written.")
             return 1
-        version = None
 
     latest = args.latest
     if latest is None:
-        latest = ask_yes_no(f"Make {version} the latest (what TTS picks by default)?", True)
+        newest = all(version_key(version) >= version_key(v) for v in versions["versions"])
+        latest = ask_yes_no(f"Make data {version} the latest (what TTS picks by default)?", newest)
 
-    out = os.path.join(args.root, version)
-    print(f"\nWill write {out}" + ("  (including individual card images)" if args.with_cards else ""))
-    print(f"and add {version} to versions.json" + (" as latest." if latest else " (latest stays "
-                                                    f"{versions['latest'] or 'unset'})."))
+    print(f"\nWill {'replace' if exists else 'write'} {out}"
+          + ("  (including individual card images)" if args.with_cards else ""))
+    print(f"and list data {version} in versions.json" + (" as latest." if latest else " (latest stays "
+                                                         f"{versions['latest'] or 'unset'})."))
     if not args.yes and not ask_yes_no("Go ahead?", True):
         print("Cancelled - nothing was written.")
         return 1
 
     # build into a temporary folder and only rename it into place once it's complete and checked
     tmp = os.path.join(args.root, f".building-{version}")
+    old = os.path.join(args.root, f".replaced-{version}")
     shutil.rmtree(tmp, ignore_errors=True)
+    shutil.rmtree(old, ignore_errors=True)
     os.makedirs(tmp)
     try:
         print("\nBuilding...")
@@ -479,9 +479,12 @@ def main(argv):
             for pr in problems:
                 print(f"  - {pr}")
             return 1
+        if exists:
+            os.replace(out, old)
         os.replace(tmp, out)
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
+        shutil.rmtree(old, ignore_errors=True)
 
     versions["versions"] = sorted(set(versions["versions"]) | {version}, key=version_key, reverse=True)
     if latest:
@@ -491,10 +494,10 @@ def main(argv):
         f.write("\n")
 
     n_files = sum(len(fs) for _, _, fs in os.walk(out))
-    print(f"\nDone: {version} written to {out}  ({n_files} files, build {manifest['build']})")
+    print(f"\nDone: data {version} written to {out}  ({n_files} files, build {manifest['build']})")
     print(f"versions.json: latest = {versions['latest']}, versions = {', '.join(versions['versions'])}")
     print("\nNext: commit and push with GitHub Desktop (or git). Once it's on GitHub,"
-          f" {version} appears in the TTS Version dropdown.")
+          f" data {version} appears in the TTS Data dropdown.")
     return 0
 
 

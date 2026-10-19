@@ -1,6 +1,6 @@
 @echo off
-rem Builds a new release from the zips in scripts\input into 11e-stratagems\<version>\
-rem and adds it to 11e-stratagems\versions.json. It asks for the version number as it goes.
+rem Builds a release from the zips in scripts\input into 11e-stratagems\<data version>\
+rem (the game-datacards data version, e.g. 981) and adds it to 11e-stratagems\versions.json.
 setlocal
 cd /d "%~dp0"
 
