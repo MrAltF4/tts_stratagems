@@ -1,7 +1,7 @@
 --[[
     40K Stratagem Bag Builder  (paste into TTS > Scripting > Global)
 
-    On load the panel downloads versions.json and fills the Data dropdown
+    On load the panel downloads versions.json and fills the Dataset dropdown
     (latest release preselected). Pick a data version, click the button, and the script:
       1. downloads that release's manifest.json
       2. builds a deck for every detachment from its _deck.png sheet
@@ -11,7 +11,7 @@
          at SPAWN_POSITION, ready to be saved as a single object for another mod
 
     Two versions:
-      data version - game-datacards.eu's own data number (e.g. 981); one release folder each
+      data version - game-datacards.eu's own data number (e.g. v981); one release folder each
       mod version  - MOD_VERSION below; how this mod builds the cards. Bump it on any change here.
 
     ROOT_URL must point at the repo's 11e-stratagems folder (the one holding versions.json)
@@ -60,8 +60,10 @@ by [b]MrAltF4[/b], using their mod:
 [b]Stratagem Automation[/b]:  https://steamcommunity.com/sharedfiles/filedetails/?id=3820338475]=]
 
 -- version colours, matching the mod's table sign (BBCode in the bag name, hex in the panel)
-local MOD_VERSION_COLOUR  = "C8C8C8"
-local DATA_VERSION_COLOUR = "C49494"
+local DATA_VERSION_COLOUR = "DB9191"
+local MOD_VERSION_COLOUR  = "2279DF"
+local NAME_GAP            = string.rep(" ", 32)   -- master bag name: title, gap, then the versions
+local BULLET              = "\226\128\162 "      -- build summary list marker (UTF-8 bullet)
 
 local BTN_COLORS     = "#0D2B40FF|#1A5C8AFF|#0A1F2EFF|#333333AA"
 local BTN_TEXT_COLOR = "#3CCCFF"
@@ -70,14 +72,14 @@ local BTN_TEXT_COLOR = "#3CCCFF"
 local setStatus
 local loadVersions
 
--- folder name only, e.g. "981" (letters, digits, dot, dash, underscore); also keeps it XML-safe
+-- folder name only, e.g. "v981" (letters, digits, dot, dash, underscore); also keeps it XML-safe
 local function isValidVersion(v)
     return type(v) == "string" and string.match(v, "^[%w%.%-_]+$") ~= nil
 end
 
 -- status text can include web error messages; keep them from breaking the XML
 local function xmlEscape(s)
-    return (tostring(s):gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub('"', "&quot;"))
+    return (tostring(s):gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub('"', "&quot;"):gsub("\n", "&#10;"))
 end
 
 local function hasVersion(v)
@@ -103,8 +105,9 @@ local function buildUiXml(statusText)
     local btnLabel = versionsLoaded and "Build Stratagem Bags" or "Reload Versions"
 
     local lines = {}
-    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperCenter" offsetXY="0 -150" width="260" height="150" color="#101820E6">')
-    table.insert(lines, '  <Text text="Data" color="#' .. DATA_VERSION_COLOUR .. '" fontSize="14" rectAlignment="UpperLeft" offsetXY="10 -10" width="70" height="30" alignment="MiddleLeft" />')
+    table.insert(lines, '<Panel id="strat_panel" rectAlignment="UpperCenter" offsetXY="0 -150" width="260" height="200" color="#101820FF">')
+    table.insert(lines, '  <Text text="Dataset" color="#' .. DATA_VERSION_COLOUR .. '" fontSize="14" rectAlignment="UpperLeft" offsetXY="10 -10" width="70" height="30" alignment="MiddleLeft" />')
+    table.insert(lines, '  <Text text="from game-datacards.eu" color="#A0A0A0" fontSize="10" rectAlignment="UpperLeft" offsetXY="80 -41" width="170" height="14" alignment="MiddleLeft" />')
     table.insert(lines, '  <Dropdown id="strat_version" onValueChanged="onVersionChosen" rectAlignment="UpperLeft" offsetXY="80 -10" width="170" height="30" fontSize="14">')
     if #versions == 0 then
         table.insert(lines, '    <Option selected="true">' .. (loadingVersions and "Loading..." or "None found") .. '</Option>')
@@ -117,11 +120,11 @@ local function buildUiXml(statusText)
         end
     end
     table.insert(lines, '  </Dropdown>')
-    table.insert(lines, '  <Button id="strat_btn" onClick="onBuildStratagems" rectAlignment="UpperLeft" offsetXY="10 -48" width="240" height="40" fontSize="16" colors="' .. BTN_COLORS .. '" transition="ColorTint">')
+    table.insert(lines, '  <Button id="strat_btn" onClick="onBuildStratagems" rectAlignment="UpperLeft" offsetXY="10 -60" width="240" height="40" fontSize="16" colors="' .. BTN_COLORS .. '" transition="ColorTint">')
     table.insert(lines, '    <Text id="strat_btn_text" text="' .. btnLabel .. '" color="' .. BTN_TEXT_COLOR .. '" fontSize="16" width="240" height="40" alignment="MiddleCenter" />')
     table.insert(lines, '  </Button>')
-    table.insert(lines, '  <Text id="strat_status" text="' .. xmlEscape(statusText or "") .. '" color="#FFFFFF" fontSize="12" rectAlignment="UpperLeft" offsetXY="10 -94" width="240" height="30" alignment="MiddleLeft" />')
-    table.insert(lines, '  <Text text="Mod ' .. MOD_VERSION .. '" color="#' .. MOD_VERSION_COLOUR .. '" fontSize="12" rectAlignment="UpperLeft" offsetXY="10 -120" width="240" height="24" alignment="MiddleLeft" />')
+    table.insert(lines, '  <Text id="strat_status" text="' .. xmlEscape(statusText or "") .. '" color="#FFFFFF" fontSize="12" rectAlignment="UpperLeft" offsetXY="10 -106" width="240" height="66" alignment="UpperLeft" />')
+    table.insert(lines, '  <Text text="Mod ' .. MOD_VERSION .. '" color="#' .. MOD_VERSION_COLOUR .. '" fontSize="12" rectAlignment="UpperRight" offsetXY="-10 -177" width="240" height="16" alignment="MiddleRight" />')
     table.insert(lines, '</Panel>')
     return table.concat(lines, "\n")
 end
@@ -248,12 +251,13 @@ local function processManifest(manifest)
     assetBuild = tostring(manifest.build or "")
     cardBackUrl = assetUrl(manifest.card_back)
     local bagList = {}
-    local deckTotal, cardTotal = 0, 0
+    local factionTotal, detTotal, cardTotal, coreTotal = 0, 0, 0, 0
 
     for _, faction in ipairs(manifest.factions or {}) do
         table.insert(bagList, buildFactionBag(faction))
+        factionTotal = factionTotal + 1
         for _, det in ipairs(faction.detachments) do
-            deckTotal = deckTotal + 1
+            detTotal = detTotal + 1
             cardTotal = cardTotal + #det.cards
         end
     end
@@ -261,17 +265,21 @@ local function processManifest(manifest)
     if manifest.core then
         local deck = makeDeck(manifest.core, "Core Stratagems")
         table.insert(bagList, makeBag("Core Stratagems", CORE_COLOUR, { deck }))
-        deckTotal = deckTotal + 1
-        cardTotal = cardTotal + #manifest.core.cards
+        coreTotal = #manifest.core.cards
+        cardTotal = cardTotal + coreTotal
     end
 
-    local name = "40K Stratagems - 11e"
-        .. "  [" .. MOD_VERSION_COLOUR .. "]mod " .. MOD_VERSION .. "[-]"
-        .. "  [" .. DATA_VERSION_COLOUR .. "]data " .. version .. "[-]"
+    -- the run of spaces pushes the versions onto their own line in the name tooltip
+    local name = "Stratagems 40K 11e" .. NAME_GAP
+        .. "[" .. DATA_VERSION_COLOUR .. "]data " .. version .. "[-] & "
+        .. "[" .. MOD_VERSION_COLOUR .. "]mod " .. MOD_VERSION .. "[-]"
     local master = makeBag(name, MASTER_COLOUR, bagList)
     master.Description = MASTER_DESCRIPTION
     spawnMaster(master)
-    setStatus("Data " .. version .. ": 1 bag holding " .. #bagList .. " bags / " .. deckTotal .. " decks / " .. cardTotal .. " cards")
+    setStatus("Data " .. version .. " - 1 bag holding:"
+        .. "\n" .. BULLET .. factionTotal .. " factions"
+        .. "\n" .. BULLET .. detTotal .. " detachments"
+        .. "\n" .. BULLET .. cardTotal .. " stratagems (incl. " .. coreTotal .. " core)")
 end
 
 -- download a URL and decode it as JSON; onDone(data) on success, onFail(message) otherwise
@@ -293,7 +301,7 @@ local function fetchJson(url, label, onDone, onFail)
 end
 
 -- ---------------------------------------------------------------------------
--- data version list (versions.json: { "latest": "981", "versions": ["981", ...] }, newest first)
+-- data version list (versions.json: { "latest": "v981", "versions": ["v981", ...] }, newest first)
 -- ---------------------------------------------------------------------------
 loadVersions = function()
     if loadingVersions then return end
@@ -372,7 +380,7 @@ function onBuildStratagems(player)
     startBuild(selectedVersion)
 end
 
--- Dropdown callback. TTS passes the selected option's text (e.g. "981 (latest)");
+-- Dropdown callback. TTS passes the selected option's text (e.g. "v981 (latest)");
 -- if it ever passes a 0-based index instead, map that back to the list.
 function onVersionChosen(player, value, id)
     local v = string.match(tostring(value), "^(%S+)")

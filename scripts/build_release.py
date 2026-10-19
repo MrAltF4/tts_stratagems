@@ -5,7 +5,7 @@ Build a release: every pulled zip in scripts/input -> 11e-stratagems/<data versi
     python -I build_release.py --latest --yes
     python -I build_release.py --replace --yes      (rebuild a data version after mod changes)
 
-Releases are named after the game-datacards data version the cards came from (e.g. 981), so
+Releases are named after the game-datacards data version the cards came from (e.g. v981), so
 the TTS dropdown always matches game-datacards. How the cards are built is the *mod* version,
 which lives in tts/Stratagem_Bag_Builder.lua (MOD_VERSION) and never gets its own folder:
 a mod change that alters the images means rebuilding the same data version with --replace.
@@ -49,7 +49,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 SMALL = {"of", "the", "to", "a", "an", "and", "in", "on", "for", "at", "by"}
-VERSION_RE = re.compile(r"^\d+$")   # game-datacards data version, e.g. 981
+VERSION_RE = re.compile(r"^v(\d+)$")   # game-datacards data version, e.g. v981
 
 
 class BuildError(Exception):
@@ -138,7 +138,8 @@ def fit_back(path, size, dest):
 # versions
 # ---------------------------------------------------------------------------
 def version_key(v):
-    return int(v) if VERSION_RE.match(str(v)) else -1
+    m = VERSION_RE.match(str(v))
+    return int(m.group(1)) if m else -1
 
 
 def load_versions(root):
@@ -437,7 +438,7 @@ def main(argv):
 
     print(f"\nExisting data versions: {', '.join(versions['versions']) or 'none'}"
           f"   (latest: {versions['latest'] or 'none'})")
-    version = str(data_versions[0])
+    version = f"v{data_versions[0]}"
     out = os.path.join(args.root, version)
     exists = os.path.exists(out)
     if exists:
@@ -497,7 +498,7 @@ def main(argv):
     print(f"\nDone: data {version} written to {out}  ({n_files} files, build {manifest['build']})")
     print(f"versions.json: latest = {versions['latest']}, versions = {', '.join(versions['versions'])}")
     print("\nNext: commit and push with GitHub Desktop (or git). Once it's on GitHub,"
-          f" data {version} appears in the TTS Data dropdown.")
+          f" data {version} appears in the TTS Dataset dropdown.")
     return 0
 
 

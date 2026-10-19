@@ -66,19 +66,19 @@ Double-click **build_release.bat**. It reads everything in `scripts\input` and:
    stops with a clear message if anything doesn't add up, for example a zip with fewer cards
    than the data says it should have (just run pull_all.bat again);
 2. names the release after the **game-datacards data version** the cards came from (e.g.
-   `981`), so the TTS dropdown always matches game-datacards. If that data version is
+   `v981`), so the TTS dropdown always matches game-datacards. If that data version is
    already published it asks whether to **replace** it: say yes only when you've changed
    how the cards are built (a mod change) and want to republish the same data;
 3. asks whether it should be the **latest**, which is the one TTS picks by
    default. Answer **n** if you want to try it in TTS first: it still appears in the TTS
-   Data dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
+   Dataset dropdown, it just isn't preselected. Make it latest later by editing `"latest"`
    in `11e-stratagems\versions.json`;
 4. asks you to confirm, then builds `11e-stratagems\<data version>\` (about 260 files, ~40 MB)
    and adds it to `11e-stratagems\versions.json`.
 
 ### Data version vs mod version
 
-- **Data version** (e.g. `981`): game-datacards' own number for its data. It changes when
+- **Data version** (e.g. `v981`): game-datacards' own number for its data. It changes when
   they update the rules text. It's the release folder name and what the TTS dropdown shows.
 - **Mod version** (e.g. `v0.3.1`): how this mod builds the cards. It's `MOD_VERSION` at the
   top of `tts\Stratagem_Bag_Builder.lua`; bump it whenever you change how cards are made.
