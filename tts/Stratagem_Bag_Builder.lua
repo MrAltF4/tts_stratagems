@@ -180,6 +180,7 @@ local function makeDeck(group, nickname)
         card.CustomDeck = customDeck
         card.HideWhenFaceDown = true
         card.Hands = true
+        card.Sticky = false
         table.insert(cards, card)
         table.insert(ids, cardId)
     end
@@ -194,6 +195,7 @@ local function makeDeck(group, nickname)
     deck.CustomDeck = customDeck
     deck.SidewaysCard = false
     deck.HideWhenFaceDown = true
+    deck.Sticky = false
     deck.ContainedObjects = cards
     return deck
 end
