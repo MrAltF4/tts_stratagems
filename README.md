@@ -1,6 +1,8 @@
 # tts_stratagems
 Automate the process for getting stratagems as cards within TTS
 
+**Latest game-datacards data checked: v995 (no stratagem changes); current cards: v981.** [Every version checked](11e-stratagems/version-checks.csv)
+
 ## How to use the tool
 
 The pull tool downloads the stratagem cards for every faction from the
